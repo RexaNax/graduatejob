@@ -164,3 +164,4 @@ CREATE TABLE IF NOT EXISTS lfs_file_share (
 
 -- ========== 完成 ==========
 SELECT 'Database initialization completed!' AS message;
+
