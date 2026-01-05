@@ -1,0 +1,104 @@
+# ============================================
+# Docker Compose 编排文件
+# ============================================
+# 服务架构:
+#   nginx (80) -> frontend (静态文件)
+#              -> backend (8919)
+#   backend -> mysql (3306)
+#           -> redis (6379)
+# ============================================
+
+version: '3.8'
+
+services:
+  # ========== Nginx 反向代理 ==========
+  nginx:
+    image: nginx:alpine
+    container_name: lfs-nginx
+    ports:
+      - "80:80"           # 对外暴露 80 端口
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # 挂载配置文件
+      - ./lfs-vue-master/dist:/usr/share/nginx/html:ro  # 挂载前端静态文件
+    depends_on:
+      - backend
+    networks:
+      - lfs-network
+    restart: unless-stopped
+
+  # ========== 后端服务 ==========
+  backend:
+    build:
+      context: ./lfs-master
+      dockerfile: Dockerfile
+    container_name: lfs-backend
+    environment:
+      # 数据库配置 - 使用容器名作为 host
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/lfs?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=lfs123456
+      # Redis 配置
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      # 文件存储路径（容器内路径）
+      - CONFIG_FILE_SERVER_LOCAL_FILE_DIR=/app/uploadFile
+      - CONFIG_FILE_SERVER_LOCAL_PREVIEW_URL=http://localhost/api
+    volumes:
+      - upload-data:/app/uploadFile  # 持久化上传文件
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - lfs-network
+    restart: unless-stopped
+
+  # ========== MySQL 数据库 ==========
+  mysql:
+    image: mysql:8.0
+    container_name: lfs-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=lfs123456
+      - MYSQL_DATABASE=lfs
+      - MYSQL_CHARSET=utf8mb4
+      - MYSQL_COLLATION=utf8mb4_unicode_ci
+    volumes:
+      - mysql-data:/var/lib/mysql           # 持久化数据
+      - ./lfs-master/sql:/docker-entrypoint-initdb.d:ro  # 初始化脚本
+    ports:
+      - "3307:3306"       # 映射到 3307 避免与本地 MySQL 冲突
+    networks:
+      - lfs-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-plfs123456"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ========== Redis 缓存 ==========
+  redis:
+    image: redis:7-alpine
+    container_name: lfs-redis
+    volumes:
+      - redis-data:/data  # 持久化数据
+    ports:
+      - "6380:6379"       # 映射到 6380 避免与本地 Redis 冲突
+    networks:
+      - lfs-network
+    restart: unless-stopped
+
+# ========== 网络 ==========
+networks:
+  lfs-network:
+    driver: bridge
+
+# ========== 数据卷 ==========
+volumes:
+  mysql-data:
+    name: lfs-mysql-data
+  redis-data:
+    name: lfs-redis-data
+  upload-data:
+    name: lfs-upload-data
