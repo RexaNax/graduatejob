@@ -1,0 +1,30 @@
+sequenceDiagram
+    participant U as 用户
+    participant F as 前端
+    participant B as 后端
+    participant R as Redis
+    participant D as 磁盘
+    
+    U->>F: 选择文件
+    F->>F: 计算文件MD5
+    F->>B: POST /file/uploadInit (MD5)
+    B->>B: 查询MD5是否存在
+    
+    alt MD5已存在(秒传)
+        B-->>F: uploaded=true
+        F-->>U: 秒传成功!
+    else 需要上传
+        B-->>F: uploaded=false + 已上传分片列表
+        F->>F: 文件切片(每片5MB)
+        loop 循环上传每个分片
+            F->>B: POST /file/upload (分片数据)
+            B->>D: 保存分片
+            B->>R: 记录分片状态
+            B-->>F: 分片上传成功
+        end
+        F->>B: 最后一片上传完成
+        B->>D: 合并所有分片
+        B->>B: 生成缩略图
+        B-->>F: 返回文件ID
+        F-->>U: 上传完成!
+    end

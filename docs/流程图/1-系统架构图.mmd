@@ -1,0 +1,33 @@
+graph TB
+    subgraph 用户层
+        A[用户浏览器]
+    end
+    
+    subgraph 网关层
+        B[Nginx :80]
+    end
+    
+    subgraph 应用层
+        C[Spring Boot :8919]
+        C1[UserController<br/>用户认证]
+        C2[FileController<br/>文件管理]
+        C3[ShareController<br/>文件分享]
+        C4[TrashController<br/>回收站]
+    end
+    
+    subgraph 数据层
+        D[(MySQL :3306)]
+        E[(Redis :6379)]
+        F[文件存储<br/>磁盘/MinIO]
+    end
+    
+    A -->|HTTP| B
+    B -->|静态文件| G[Vue3 SPA]
+    B -->|/api/*| C
+    C --- C1
+    C --- C2
+    C --- C3
+    C --- C4
+    C -->|数据持久化| D
+    C -->|缓存/分片| E
+    C -->|文件读写| F

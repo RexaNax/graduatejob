@@ -1,0 +1,37 @@
+sequenceDiagram
+    participant U as 用户
+    participant B as 后端
+    participant DB as 数据库
+    participant D as 磁盘
+    
+    rect rgb(255, 240, 240)
+        Note over U,D: 删除文件(移入回收站)
+        U->>B: POST /file/delete
+        B->>DB: 标记 in_trash=1
+        B->>DB: 创建回收站记录
+        B-->>U: 删除成功
+    end
+    
+    rect rgb(240, 255, 240)
+        Note over U,D: 还原文件
+        U->>B: POST /trash/recycle
+        B->>DB: 标记 in_trash=0
+        B->>DB: 删除回收站记录
+        B-->>U: 还原成功
+    end
+    
+    rect rgb(255, 230, 230)
+        Note over U,D: 彻底删除
+        U->>B: POST /trash/delete
+        B->>DB: 删除数据库记录
+        B->>D: 删除物理文件
+        B-->>U: 彻底删除成功
+    end
+    
+    rect rgb(255, 200, 200)
+        Note over U,D: 清空回收站
+        U->>B: POST /trash/clear
+        B->>DB: 批量删除所有记录
+        B->>D: 批量删除物理文件
+        B-->>U: 清空成功
+    end

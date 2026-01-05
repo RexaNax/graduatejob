@@ -1,0 +1,44 @@
+erDiagram
+    sys_user ||--o{ lfs_file : "拥有"
+    sys_user ||--o{ lfs_file_share : "创建"
+    lfs_file ||--o{ lfs_file_share : "被分享"
+    lfs_file ||--o| lfs_file_trash : "回收站"
+    
+    sys_user {
+        bigint id PK "用户ID"
+        varchar username "用户名"
+        varchar password "密码(MD5)"
+        varchar nickname "昵称"
+        varchar avatar "头像"
+        datetime create_time "创建时间"
+    }
+    
+    lfs_file {
+        bigint id PK "文件ID"
+        bigint user_id FK "用户ID"
+        bigint dir_id "父目录ID"
+        varchar name "文件名"
+        int file_type "文件类型"
+        bigint file_size "文件大小"
+        varchar md5 "MD5值"
+        varchar path "存储路径"
+        int in_trash "是否在回收站"
+        datetime create_time "创建时间"
+    }
+    
+    lfs_file_share {
+        bigint id PK "分享ID"
+        bigint file_id FK "文件ID"
+        bigint user_id FK "用户ID"
+        varchar share_code "分享码"
+        datetime expire_time "过期时间"
+        datetime create_time "创建时间"
+    }
+    
+    lfs_file_trash {
+        bigint id PK "回收站ID"
+        bigint file_id FK "文件ID"
+        bigint user_id FK "用户ID"
+        datetime delete_time "删除时间"
+        datetime expire_time "过期时间"
+    }

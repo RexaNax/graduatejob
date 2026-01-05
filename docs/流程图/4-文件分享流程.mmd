@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant S as 分享者
+    participant B as 后端
+    participant DB as 数据库
+    participant V as 访问者
+    
+    S->>B: POST /share/create (fileId, expireDays)
+    B->>B: 生成分享码(8位随机)
+    B->>DB: 保存分享记录
+    B-->>S: 返回分享链接 /s/abc12345
+    
+    Note over S,V: ===== 分享链接传递 =====
+    
+    V->>B: GET /share/access/abc12345
+    B->>DB: 查询分享记录
+    B->>B: 检查是否过期
+    alt 未过期
+        B->>DB: 查询文件信息
+        B-->>V: 返回文件信息
+        V->>B: 下载/预览文件
+    else 已过期
+        B-->>V: 返回分享已过期
+    end

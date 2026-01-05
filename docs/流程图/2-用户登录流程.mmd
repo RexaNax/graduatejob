@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant U as 用户
+    participant F as 前端
+    participant B as 后端
+    participant DB as 数据库
+    
+    U->>F: 输入用户名密码
+    F->>B: POST /user/login
+    B->>DB: 查询用户信息
+    DB-->>B: 返回用户记录
+    B->>B: 验证密码(MD5)
+    alt 验证成功
+        B->>B: 生成JWT Token
+        B-->>F: 返回Token+用户信息
+        F->>F: 存储Token到localStorage
+        F-->>U: 登录成功,跳转首页
+    else 验证失败
+        B-->>F: 返回错误信息
+        F-->>U: 提示用户名或密码错误
+    end
