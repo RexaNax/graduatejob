@@ -1,0 +1,51 @@
+# ========== 系统文件 ==========
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ========== IDE / 工具运行时 ==========
+.idea/
+.vscode/
+*.iml
+.claude/
+.codebuddy/
+.workbuddy/
+workspace/
+workspace_tools/
+
+# ========== 后端 ==========
+project/backend/target/
+project/backend/logs/
+*.log
+*.jar
+
+# ========== 前端 ==========
+project/frontend/node_modules/
+project/frontend/dist/
+
+# ========== PPT 工具运行时（软链接 / 浏览器缓存）==========
+docs/ppt/node_modules
+docs/ppt/pw-browsers/
+docs/ppt_v2/node_modules
+docs/ppt_v2/pw-browsers/
+
+# ========== 临时文件 / 加工脚本中间产物 ==========
+*.tmp
+*.temp
+~$*
+_tmp_*
+_dbg_*
+
+# ========== 不上传 GitHub 的内容（本地保留）==========
+# 查重报告：含降重/查重痕迹，不公开
+docs/查重报告/
+docs/论文工作区/查重报告/
+# 参考资料：往届他人实名论文 / 样文，涉隐私，不上传
+docs/参考资料/
+# 论文加工历史中间版与备份（344MB 大体积，非完整毕设必需）
+docs/论文工作区/归档/
+
+# ========== 顶层打包压缩件（按需，不入库）==========
+*.zip
