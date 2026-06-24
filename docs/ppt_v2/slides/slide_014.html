@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运行界面③：容器运行状态</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">运行界面 ③ · 容器运行状态</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">CONTAINERS &amp; TESTS</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">11</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-24 px-12 flex flex-col h-[640px] gap-4">
+    <div class="grid grid-cols-2 gap-5 flex-1">
+      <!-- 左：docker ps -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="container" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">docker ps · 容器全部 Up</span>
+          <span class="ml-auto text-xs text-emerald-600 font-mono font-semibold">● UP 4/4</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/docker_ps.png" alt="docker ps" class="w-full h-full object-contain"/>
+        </div>
+      </div>
+
+      <!-- 右：测试通过 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="check-check" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">自动化测试 · 24 用例 PASS</span>
+          <span class="ml-auto text-xs text-emerald-600 font-mono font-semibold">● 24/24 PASS</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/test_pass.png" alt="测试通过" class="w-full h-full object-contain"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary text-white rounded-xl px-5 py-3 flex items-start gap-3">
+      <i data-lucide="info" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+      <div class="text-[14px] leading-relaxed">
+        <span class="font-mono text-accent">docker ps</span> 表明 nginx · backend · mysql · redis <span class="font-semibold text-accent">四个容器全部在线</span>；同时后端集成了 24 个 JUnit 自动化用例，覆盖鉴权、上传、预览、分享与回收主要接口，<span class="font-semibold text-accent">本次运行 24/24 全量通过</span>。
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

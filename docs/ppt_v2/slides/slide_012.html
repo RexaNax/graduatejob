@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运行界面①：登录与文件空间</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">运行界面 ① · 登录与文件空间</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">LOGIN &amp; FILE LIST</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">09</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-24 px-12 flex flex-col h-[640px] gap-4">
+    <!-- 双图 -->
+    <div class="grid grid-cols-2 gap-5 flex-1">
+      <!-- 左：登录页 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="log-in" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">登录入口</span>
+          <span class="ml-auto text-xs text-slate-400 font-mono">/login</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-100 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/login.png" alt="登录页" class="w-full h-full object-cover object-center"/>
+        </div>
+      </div>
+
+      <!-- 右：文件列表 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="folder-open" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">文件空间主界面</span>
+          <span class="ml-auto text-xs text-slate-400 font-mono">/files</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-100 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/files_list.png" alt="文件列表" class="w-full h-full object-cover object-top"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="bg-primary text-white rounded-xl px-5 py-3 flex items-start gap-3">
+      <i data-lucide="info" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+      <div class="text-[14px] leading-relaxed">
+        登录页提供账号密码表单，验证通过后跳转文件空间主界面；主界面统一呈现<span class="font-semibold text-accent">文件列表、左侧导航与顶部操作区</span>，是后续上传 / 预览 / 分享 / 回收诸多功能的入口。
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

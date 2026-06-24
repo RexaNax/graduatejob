@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>封面</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6',
+          ink: '#0A2442',
+          'text-primary': '#F1F5F9'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <!-- 背景层 -->
+  <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, #0A2442 0%, #0F4C82 100%);"></div>
+  <!-- 装饰层：右上角与左下角几何 -->
+  <div class="absolute top-0 right-0 w-[460px] h-[460px] z-10 opacity-20" style="background: radial-gradient(circle at 70% 30%, #2A9FD6 0%, transparent 60%);"></div>
+  <div class="absolute -bottom-32 -left-24 w-[420px] h-[420px] z-10 opacity-25" style="background: radial-gradient(circle, #1F497D 0%, transparent 60%);"></div>
+  <div class="absolute top-16 right-24 w-2 h-40 bg-accent z-10 opacity-70"></div>
+  <div class="absolute bottom-16 left-24 w-40 h-2 bg-accent z-10 opacity-70"></div>
+
+  <!-- 顶部学校栏 -->
+  <div class="relative z-20 flex items-center pt-12 px-20">
+    <div class="w-1 h-12 bg-accent mr-5"></div>
+    <div>
+      <div class="text-text-primary font-heading text-2xl font-semibold tracking-wider">西安邮电大学</div>
+      <div class="text-accent text-sm tracking-[0.3em] mt-1">XI'AN UNIVERSITY OF POSTS &amp; TELECOMMUNICATIONS</div>
+    </div>
+    <div class="ml-auto text-text-primary text-base opacity-80">本科毕业设计 · 答辩</div>
+  </div>
+
+  <!-- 中央标题 -->
+  <div class="relative z-20 px-20 mt-32">
+    <div class="text-accent text-sm tracking-[0.4em] mb-4">GRADUATION THESIS DEFENSE · 2026</div>
+    <div class="font-heading text-text-primary text-[58px] font-bold leading-tight">
+      基于容器化部署的<br/>
+      云文件管理系统设计与实现
+    </div>
+    <div class="mt-6 flex items-center gap-3 text-accent">
+      <span class="w-12 h-[2px] bg-accent"></span>
+      <span class="text-base tracking-widest">Docker · Spring Boot · Vue 3 · Nginx</span>
+    </div>
+  </div>
+
+  <!-- 底部信息块 -->
+  <div class="absolute bottom-12 left-20 right-20 z-20 flex items-end justify-between text-text-primary">
+    <div class="space-y-1.5">
+      <div class="flex items-center gap-3 text-base"><i data-lucide="user" class="w-4 h-4 text-accent"></i><span class="opacity-80">学　　生</span><span class="font-semibold">杨佳星</span></div>
+      <div class="flex items-center gap-3 text-base"><i data-lucide="hash" class="w-4 h-4 text-accent"></i><span class="opacity-80">学　　号</span><span class="font-semibold">04222088</span></div>
+      <div class="flex items-center gap-3 text-base"><i data-lucide="users" class="w-4 h-4 text-accent"></i><span class="opacity-80">班　　级</span><span class="font-semibold">2203</span></div>
+    </div>
+    <div class="space-y-1.5 text-right">
+      <div class="flex items-center justify-end gap-3 text-base"><span class="opacity-80">学院专业</span><span class="font-semibold">计算机学院 · 网络工程</span><i data-lucide="graduation-cap" class="w-4 h-4 text-accent"></i></div>
+      <div class="flex items-center justify-end gap-3 text-base"><span class="opacity-80">指导教师</span><span class="font-semibold">王晓梅</span><i data-lucide="user-check" class="w-4 h-4 text-accent"></i></div>
+      <div class="flex items-center justify-end gap-3 text-base"><span class="opacity-80">答辩日期</span><span class="font-semibold">2026 年 6 月</span><i data-lucide="calendar" class="w-4 h-4 text-accent"></i></div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

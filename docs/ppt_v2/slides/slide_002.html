@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>目录</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6',
+          ink: '#0A2442',
+          surface: '#F7FAFD'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <!-- 背景 -->
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <!-- 左侧蓝条 -->
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <!-- 顶部页眉 -->
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">目　录</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">CONTENTS</span>
+  </div>
+
+  <!-- 内容 -->
+  <div class="relative z-20 pt-28 px-20">
+    <div class="text-slate-500 text-base mb-10">本次汇报分为四个部分</div>
+    <div class="grid grid-cols-2 gap-6">
+      <!-- 卡片 01 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex items-center gap-6 relative overflow-hidden">
+        <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-primary/5"></div>
+        <div class="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center font-heading text-3xl font-bold flex-shrink-0">01</div>
+        <div class="flex-1">
+          <div class="font-heading text-2xl font-semibold text-slate-800">选题背景与研究目标</div>
+          <div class="text-slate-500 text-sm mt-2">Background &amp; Objectives</div>
+        </div>
+        <i data-lucide="lightbulb" class="w-7 h-7 text-accent flex-shrink-0"></i>
+      </div>
+      <!-- 卡片 02 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex items-center gap-6 relative overflow-hidden">
+        <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-primary/5"></div>
+        <div class="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center font-heading text-3xl font-bold flex-shrink-0">02</div>
+        <div class="flex-1">
+          <div class="font-heading text-2xl font-semibold text-slate-800">系统设计与容器化部署</div>
+          <div class="text-slate-500 text-sm mt-2">Architecture &amp; Containerization</div>
+        </div>
+        <i data-lucide="layers" class="w-7 h-7 text-accent flex-shrink-0"></i>
+      </div>
+      <!-- 卡片 03 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex items-center gap-6 relative overflow-hidden">
+        <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-primary/5"></div>
+        <div class="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center font-heading text-3xl font-bold flex-shrink-0">03</div>
+        <div class="flex-1">
+          <div class="font-heading text-2xl font-semibold text-slate-800">核心功能实现</div>
+          <div class="text-slate-500 text-sm mt-2">Core Implementation</div>
+        </div>
+        <i data-lucide="cog" class="w-7 h-7 text-accent flex-shrink-0"></i>
+      </div>
+      <!-- 卡片 04 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex items-center gap-6 relative overflow-hidden">
+        <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-primary/5"></div>
+        <div class="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center font-heading text-3xl font-bold flex-shrink-0">04</div>
+        <div class="flex-1">
+          <div class="font-heading text-2xl font-semibold text-slate-800">运行展示与总结</div>
+          <div class="text-slate-500 text-sm mt-2">Showcase &amp; Conclusion</div>
+        </div>
+        <i data-lucide="circle-check" class="w-7 h-7 text-accent flex-shrink-0"></i>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

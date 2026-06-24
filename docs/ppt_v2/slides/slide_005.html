@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>系统总体架构</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">系统总体架构</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">SYSTEM ARCHITECTURE</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">05</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-24 px-16 grid grid-cols-12 gap-6 h-[600px]">
+    <!-- 左：架构大图 -->
+    <div class="col-span-7 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-1 h-5 bg-accent"></div>
+          <span class="text-base font-heading font-semibold text-slate-800">图 3.1 · 系统总体架构图</span>
+        </div>
+        <span class="text-xs text-slate-400">Layered Architecture</span>
+      </div>
+      <div class="flex-1 flex items-center justify-center bg-slate-50 rounded-xl border border-slate-100 overflow-hidden">
+        <img src="../assets/figures/fig_3_1_system_architecture.png"
+             alt="系统总体架构图"
+             class="max-w-full max-h-full object-contain" />
+      </div>
+    </div>
+
+    <!-- 右：5 行分层说明 -->
+    <div class="col-span-5 flex flex-col gap-3">
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="monitor" class="w-5 h-5 text-primary"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-slate-800">表现层</div>
+          <div class="text-[12px] text-slate-500 leading-relaxed">Vue 3 SPA 管理多个视图，负责交互与页面路由</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="server" class="w-5 h-5 text-primary"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-slate-800">业务层</div>
+          <div class="text-[12px] text-slate-500 leading-relaxed">Spring Boot 提供 REST 接口，集中处理鉴权与业务逻辑</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="database" class="w-5 h-5 text-primary"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-slate-800">数据层</div>
+          <div class="text-[12px] text-slate-500 leading-relaxed">MySQL 存业务元数据，Redis 存 Token 黑名单与临时状态</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border-2 border-accent bg-accent/5 p-4 flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+          <i data-lucide="container" class="w-5 h-5 text-white"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-slate-800">部署层 <span class="text-xs text-accent font-medium ml-1">本课题重点</span></div>
+          <div class="text-[12px] text-slate-600 leading-relaxed">Nginx 作为容器化后的统一入口，同时负责静态资源与反向代理</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-slate-800">文件处理层</div>
+          <div class="text-[12px] text-slate-500 leading-relaxed">Aspose / PDFBox / JAVE 负责 Office、PDF 与音视频多格式预览</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

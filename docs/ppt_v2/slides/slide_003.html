@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究背景与意义</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6',
+          danger: '#DC2626',
+          warn: '#EA580C'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">研究背景与意义</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">BACKGROUND</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">03</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <!-- 左右对照 -->
+  <div class="relative z-20 pt-24 px-16 flex items-center gap-6 h-[600px]">
+    <!-- 左：传统部署痛点 -->
+    <div class="flex-1 bg-white rounded-2xl border border-rose-200 p-7 h-[460px] flex flex-col">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-lg bg-rose-50 flex items-center justify-center">
+          <i data-lucide="triangle-alert" class="w-5 h-5 text-rose-600"></i>
+        </div>
+        <div class="font-heading text-xl font-semibold text-slate-800">传统部署</div>
+        <span class="ml-auto text-rose-600 text-sm font-medium">PAIN POINTS</span>
+      </div>
+      <div class="grid grid-cols-2 gap-4 flex-1">
+        <div class="bg-rose-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-rose-100">
+          <i data-lucide="git-branch" class="w-7 h-7 text-rose-600 mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">环境与机器强耦合</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">换台机器就跑不起来</div>
+        </div>
+        <div class="bg-rose-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-rose-100">
+          <i data-lucide="settings" class="w-7 h-7 text-rose-600 mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">依赖版本不一致</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">JDK / MySQL / Redis 各本</div>
+        </div>
+        <div class="bg-rose-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-rose-100">
+          <i data-lucide="database" class="w-7 h-7 text-rose-600 mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">初始化脚本遗漏</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">手工建库建表易出错</div>
+        </div>
+        <div class="bg-rose-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-rose-100">
+          <i data-lucide="lock" class="w-7 h-7 text-rose-600 mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">目录权限难统一</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">上传目录读写权限冲突</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中：箭头 -->
+    <div class="flex flex-col items-center justify-center w-[110px]">
+      <div class="text-primary text-sm font-semibold mb-2">容器化</div>
+      <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shadow-lg">
+        <i data-lucide="chevrons-right" class="w-8 h-8 text-white"></i>
+      </div>
+      <div class="text-slate-500 text-xs mt-2">Containerize</div>
+    </div>
+
+    <!-- 右：容器化方案 -->
+    <div class="flex-1 bg-white rounded-2xl border border-blue-200 p-7 h-[460px] flex flex-col">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
+          <i data-lucide="circle-check" class="w-5 h-5 text-primary"></i>
+        </div>
+        <div class="font-heading text-xl font-semibold text-slate-800">容器化方案</div>
+        <span class="ml-auto text-primary text-sm font-medium">SOLUTIONS</span>
+      </div>
+      <div class="grid grid-cols-2 gap-4 flex-1">
+        <div class="bg-blue-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-blue-100">
+          <i data-lucide="zap" class="w-7 h-7 text-primary mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">一条命令一键启动</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">compose up -d 拉起全栈</div>
+        </div>
+        <div class="bg-blue-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-blue-100">
+          <i data-lucide="package" class="w-7 h-7 text-primary mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">镜像版本钉死</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">依赖随镜像交付</div>
+        </div>
+        <div class="bg-blue-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-blue-100">
+          <i data-lucide="hard-drive" class="w-7 h-7 text-primary mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">数据持久化隔离</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">volumes 外挂，重启不丢失</div>
+        </div>
+        <div class="bg-blue-50/60 rounded-xl p-3 flex flex-col items-center justify-center text-center border border-blue-100">
+          <i data-lucide="refresh-cw" class="w-7 h-7 text-primary mb-1.5"></i>
+          <div class="text-sm font-semibold text-slate-800">跨机器一致复现</div>
+          <div class="text-[11px] text-slate-500 mt-1 leading-snug">任何装了 Docker 的机都能跑</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部金句 -->
+  <div class="absolute bottom-6 left-16 right-16 z-20">
+    <div class="bg-primary text-white rounded-xl px-6 py-4 flex items-center gap-3">
+      <i data-lucide="target" class="w-5 h-5 text-accent flex-shrink-0"></i>
+      <div class="text-base">
+        本课题关注的不是“<span class="font-semibold text-accent">能不能做出来</span>”，而是系统能否在任何一台机器上<span class="font-semibold text-accent">一键部署、稳定运行与完整验证</span>
+      </div>    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

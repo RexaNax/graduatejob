@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>总结与展望</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">总结与展望</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">CONCLUSION &amp; FUTURE WORK</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">12</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-24 px-12 flex flex-col h-[640px] gap-4">
+    <div class="grid grid-cols-2 gap-5 flex-1">
+      <!-- 左：已完成工作 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+        <div class="bg-emerald-500 px-5 py-3 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center">
+            <i data-lucide="circle-check" class="w-5 h-5 text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-white text-lg font-bold font-heading">已完成工作</div>
+            <div class="text-emerald-50 text-xs">Achievements</div>
+          </div>
+          <span class="bg-white/20 text-white text-xs px-2 py-1 rounded font-semibold">6 项</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">①</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">完整业务闭环</div>
+              <div class="text-xs text-slate-500 mt-0.5">登录 / 上传 / 目录 / 预览 / 分享 / 回收 / 统计</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">②</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">容器化一键部署</div>
+              <div class="text-xs text-slate-500 mt-0.5">4 容器 Compose 编排，跨机器一致复现</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">③</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">预览链路修复</div>
+              <div class="text-xs text-slate-500 mt-0.5">secret + expire 签名，路径归一化校验</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">④</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">JWT + user_id 双用户隔离</div>
+              <div class="text-xs text-slate-500 mt-0.5">后端 SQL 强制追加 user_id 条件，不依赖前端</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">⑤</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">启动兼容补丁</div>
+              <div class="text-xs text-slate-500 mt-0.5">后端启动时自动补齐表结构，旧库无缝升级</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600 font-bold text-sm">⑥</div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">24 项 JUnit 集成测试</div>
+              <div class="text-xs text-slate-500 mt-0.5">贯穿鉴权 / 上传 / 预览 / 分享 / 回收 五大接口，本次 24/24 全部通过</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：不足与展望 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+        <div class="bg-amber-500 px-5 py-3 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center">
+            <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-white text-lg font-bold font-heading">不足与展望</div>
+            <div class="text-amber-50 text-xs">Limitations &amp; Future Work</div>
+          </div>
+          <span class="bg-white/20 text-white text-xs px-2 py-1 rounded font-semibold">3 项</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="users" class="w-4 h-4 text-amber-600"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">权限模型简单</div>
+              <div class="text-xs text-slate-500 mt-0.5">仅 admin / demo 两类，未引入完整 RBAC</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="cloud" class="w-4 h-4 text-amber-600"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">存储以本地目录为主</div>
+              <div class="text-xs text-slate-500 mt-0.5">未接入对象存储 OSS</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="activity" class="w-4 h-4 text-amber-600"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-slate-800">监控运维基础</div>
+              <div class="text-xs text-slate-500 mt-0.5">缺少日志聚合与 Prometheus 指标</div>
+            </div>
+          </div>
+
+          <!-- 边界说明卡片 -->
+          <div class="mt-1 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+              <span class="text-xs font-semibold text-slate-700">已识别并主动规避的边界</span>
+            </div>
+            <div class="text-[11px] text-slate-500 leading-relaxed">多节点 K8s 编排 / 分布式存储 / 集群高可用，均超出单机单节点部署课题边界，本课题不展开。</div>
+          </div>
+
+          <div class="mt-1 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+            <div class="text-xs text-amber-800">
+              <span class="font-semibold">后续可扩展：</span>团队空间 / 对象存储 / 分享策略升级 / 日志监控
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

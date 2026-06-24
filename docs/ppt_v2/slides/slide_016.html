@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>致谢</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6',
+          ink: '#0A2442',
+          'text-primary': '#F1F5F9'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <!-- 背景层 -->
+  <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, #0A2442 0%, #0F4C82 100%);"></div>
+  <!-- 装饰层 -->
+  <div class="absolute -top-32 -right-32 w-[500px] h-[500px] z-10 opacity-15" style="background: radial-gradient(circle, #2A9FD6 0%, transparent 60%);"></div>
+  <div class="absolute -bottom-32 -left-24 w-[420px] h-[420px] z-10 opacity-20" style="background: radial-gradient(circle, #1F497D 0%, transparent 60%);"></div>
+  <div class="absolute top-1/2 left-20 w-2 h-32 bg-accent z-10 opacity-50" style="transform: translateY(-50%);"></div>
+  <div class="absolute top-1/2 right-20 w-2 h-32 bg-accent z-10 opacity-50" style="transform: translateY(-50%);"></div>
+
+  <!-- 顶部小字 -->
+  <div class="relative z-20 flex items-center pt-14 px-20">
+    <div class="w-1 h-8 bg-accent mr-4"></div>
+    <span class="text-text-primary text-base tracking-widest opacity-80">THANK YOU FOR YOUR ATTENTION</span>
+  </div>
+
+  <!-- 中央主标题 -->
+  <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-20">
+    <div class="text-accent text-base tracking-[0.5em] mb-6 opacity-80">敬 　请 　批 　评 　指 　正</div>
+    <div class="font-heading text-text-primary text-7xl font-bold leading-tight">
+      敬请各位老师批评指正
+    </div>
+    <div class="mt-10 flex items-center gap-4 text-text-primary opacity-80">
+      <span class="w-16 h-[2px] bg-accent"></span>
+      <span class="text-lg tracking-widest">THANKS FOR LISTENING</span>
+      <span class="w-16 h-[2px] bg-accent"></span>
+    </div>
+    <div class="mt-12 text-text-primary text-base opacity-70 leading-relaxed">
+      感谢指导教师 <span class="text-accent font-semibold">王晓梅老师</span> 的悉心指导<br/>
+      感谢评审组各位老师的耐心倾听
+    </div>
+  </div>
+
+  <!-- 底部署名 -->
+  <div class="absolute bottom-12 left-20 right-20 z-20 flex items-center justify-between text-text-primary text-sm opacity-70">
+    <div class="flex items-center gap-2">
+      <i data-lucide="user" class="w-4 h-4 text-accent"></i>
+      <span>杨佳星 · 04222088 · 2203</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <i data-lucide="graduation-cap" class="w-4 h-4 text-accent"></i>
+      <span>西安邮电大学 · 计算机学院 · 网络工程</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <i data-lucide="calendar" class="w-4 h-4 text-accent"></i>
+      <span>2026 年 6 月</span>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

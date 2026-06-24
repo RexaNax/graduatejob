@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>容器化部署：Compose 编排 + 7 步流程</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif'],
+          mono: ['Consolas', 'Menlo', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .map-mysql { color: #10b981; }
+  .map-redis { color: #a855f7; }
+  .map-back  { color: #2A9FD6; }
+  .map-nginx { color: #f59e0b; }
+  .badge { display:inline-flex; width:22px; height:22px; border-radius:9999px; align-items:center; justify-content:center; font-weight:700; font-size:12px; color:#fff; flex-shrink:0; }
+  .b-mysql { background:#10b981; }
+  .b-redis { background:#a855f7; }
+  .b-back  { background:#2A9FD6; }
+  .b-nginx { background:#f59e0b; }
+</style>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">容器化部署：Compose 编排 + 启动流程</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">DOCKER COMPOSE</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+      <span class="font-semibold text-primary">06</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <!-- 顶部一行说明：四容器拓扑 ↔ 启动流程 的对应关系 -->
+  <div class="absolute top-16 left-0 right-0 z-20 px-10 pt-2 pb-1">
+    <div class="bg-white border border-slate-200 rounded-lg px-4 py-2 flex items-center gap-2 text-[13px] text-slate-700">
+      <i data-lucide="git-compare-arrows" class="w-4 h-4 text-accent"></i>
+      <span>左侧 <span class="font-semibold text-slate-800">四容器拓扑</span> 由 <span class="font-mono text-primary">docker-compose.yml</span> 一份配置统一编排，对应右侧 <span class="font-semibold text-slate-800">7 步启动流程</span> 中带 ① ② ③ ④ 编号的关键节点</span>
+      <span class="ml-auto flex items-center gap-2 text-[12px]">
+        <span class="badge b-mysql">①</span><span class="map-mysql font-semibold">MySQL</span>
+        <span class="badge b-redis">②</span><span class="map-redis font-semibold">Redis</span>
+        <span class="badge b-back">③</span><span class="map-back font-semibold">Backend</span>
+        <span class="badge b-nginx">④</span><span class="map-nginx font-semibold">Nginx</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-[110px] px-10 flex gap-5 h-[640px]">
+    <!-- 左侧：四容器拓扑示意（替代 yml 代码块，更利于讲解） -->
+    <div class="w-[600px] flex flex-col">
+      <div class="bg-white rounded-xl border border-slate-200 flex-1 flex flex-col px-5 py-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-1 h-5 bg-accent"></div>
+          <span class="text-[15px] font-heading font-semibold text-slate-800">四容器拓扑（Compose 一份 YAML 编排）</span>
+        </div>
+        <div class="text-[12px] text-slate-500 mb-3">用户请求统一从 80 端口进入 <span class="font-semibold text-slate-700">Nginx</span> 反向代理，再分流到后端；<span class="font-semibold text-slate-700">Backend</span> 通过容器内部网络访问 MySQL / Redis</div>
+
+        <!-- 用户层 -->
+        <div class="flex justify-center mb-2">
+          <div class="bg-slate-50 border border-slate-300 rounded-lg px-4 py-2 flex items-center gap-2">
+            <i data-lucide="globe" class="w-4 h-4 text-slate-600"></i>
+            <span class="text-[13px] font-semibold text-slate-700">用户浏览器</span>
+            <span class="text-[11px] text-slate-400 font-mono">:80</span>
+          </div>
+        </div>
+        <div class="flex justify-center mb-1"><i data-lucide="arrow-down" class="w-4 h-4 text-accent"></i></div>
+
+        <!-- Nginx 入口层 ④ -->
+        <div class="flex justify-center mb-2">
+          <div class="w-full bg-amber-50 border-2 border-amber-400 rounded-xl px-4 py-3 flex items-center gap-3">
+            <span class="badge b-nginx">④</span>
+            <i data-lucide="shuffle" class="w-5 h-5 text-amber-600"></i>
+            <div class="flex-1">
+              <div class="text-[14px] font-semibold text-slate-800">Nginx · 反向代理与静态资源</div>
+              <div class="text-[11px] text-slate-600 mt-0.5">SPA 静态资源 + <span class="font-mono">/api → backend:8080</span></div>
+            </div>
+            <span class="font-mono text-[10px] text-amber-700 bg-white border border-amber-300 rounded px-1.5 py-0.5">nginx:alpine</span>
+          </div>
+        </div>
+        <div class="flex justify-center mb-1"><i data-lucide="arrow-down" class="w-4 h-4 text-accent"></i></div>
+
+        <!-- Backend 业务层 ③ -->
+        <div class="flex justify-center mb-2">
+          <div class="w-full bg-sky-50 border-2 border-accent rounded-xl px-4 py-3 flex items-center gap-3">
+            <span class="badge b-back">③</span>
+            <i data-lucide="server" class="w-5 h-5 text-accent"></i>
+            <div class="flex-1">
+              <div class="text-[14px] font-semibold text-slate-800">Backend · Spring Boot 业务服务</div>
+              <div class="text-[11px] text-slate-600 mt-0.5">REST 接口 + 文件落盘 + JWT 鉴权 + 兼容补丁</div>
+            </div>
+            <span class="font-mono text-[10px] text-accent bg-white border border-accent rounded px-1.5 py-0.5">openjdk:17</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-12 mb-1">
+          <i data-lucide="arrow-down" class="w-4 h-4 text-emerald-500"></i>
+          <i data-lucide="arrow-down" class="w-4 h-4 text-purple-500"></i>
+        </div>
+
+        <!-- 数据层：MySQL ① + Redis ② -->
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-emerald-50 border-2 border-emerald-400 rounded-xl px-3 py-3 flex items-center gap-2">
+            <span class="badge b-mysql">①</span>
+            <i data-lucide="database" class="w-5 h-5 text-emerald-600"></i>
+            <div class="flex-1">
+              <div class="text-[13px] font-semibold text-slate-800">MySQL · 元数据</div>
+              <div class="text-[11px] text-slate-600 mt-0.5">持久卷 + 健康检查</div>
+              <div class="font-mono text-[10px] text-emerald-700 mt-0.5">mysql:8.0</div>
+            </div>
+          </div>
+          <div class="bg-purple-50 border-2 border-purple-400 rounded-xl px-3 py-3 flex items-center gap-2">
+            <span class="badge b-redis">②</span>
+            <i data-lucide="zap" class="w-5 h-5 text-purple-600"></i>
+            <div class="flex-1">
+              <div class="text-[13px] font-semibold text-slate-800">Redis · 缓存</div>
+              <div class="text-[11px] text-slate-600 mt-0.5">分享码 / 会话临时态</div>
+              <div class="font-mono text-[10px] text-purple-700 mt-0.5">redis:7-alpine</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 flex items-center gap-2">
+          <i data-lucide="network" class="w-4 h-4 text-slate-500"></i>
+          <span class="text-[11px] text-slate-600">同一 <span class="font-mono text-slate-800">lfs-network</span> 桥接网络，容器间用服务名直接通信，无需暴露内部端口</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧：7 步启动流程（步骤上挂 ① ② ③ ④ 同色徽标） -->
+    <div class="flex-1 flex flex-col">
+      <div class="bg-primary rounded-xl px-4 py-3 flex items-center gap-2 mb-2">
+        <i data-lucide="terminal" class="w-4 h-4 text-accent flex-shrink-0"></i>
+        <span class="text-accent font-mono text-sm">$</span>
+        <span class="text-white font-mono text-sm">docker compose up -d --build</span>
+      </div>
+
+      <div class="flex-1 flex flex-col gap-1">
+        <!-- step 1 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border-2 border-primary px-3 py-2 shadow-sm">
+          <div class="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-[13px] flex-shrink-0">1</div>
+          <i data-lucide="circle-play" class="w-5 h-5 text-primary flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800">下发启动命令</div>
+            <div class="text-[12px] text-slate-500">单条命令拉起整套环境，无需手工逐个启动服务</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 2 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border border-slate-200 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-slate-100 text-primary flex items-center justify-center font-bold text-[13px] flex-shrink-0">2</div>
+          <i data-lucide="package" class="w-5 h-5 text-primary flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800">拉取与构建镜像</div>
+            <div class="text-[12px] text-slate-500">所有依赖版本钉死在镜像中，跨机器可一致复现</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 3 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border border-slate-200 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-slate-100 text-primary flex items-center justify-center font-bold text-[13px] flex-shrink-0">3</div>
+          <i data-lucide="network" class="w-5 h-5 text-primary flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800">创建网络与数据卷</div>
+            <div class="text-[12px] text-slate-500">建立 <span class="font-mono">lfs-network</span> 与三个 volumes，保障数据持久化</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 4 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border-2 border-emerald-300 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-slate-100 text-primary flex items-center justify-center font-bold text-[13px] flex-shrink-0">4</div>
+          <span class="badge b-mysql">①</span>
+          <span class="badge b-redis">②</span>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800">启动 <span class="map-mysql">MySQL</span> 与 <span class="map-redis">Redis</span></div>
+            <div class="text-[12px] text-slate-500">两个基础依赖容器先行就位，作为后端启动前提</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 5 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border-2 border-emerald-300 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-slate-100 text-primary flex items-center justify-center font-bold text-[13px] flex-shrink-0">5</div>
+          <span class="badge b-mysql">①</span>
+          <i data-lucide="heart-pulse" class="w-5 h-5 text-primary flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800"><span class="map-mysql">MySQL</span> 健康检查通过</div>
+            <div class="text-[12px] text-slate-500">通过 <span class="font-mono">healthcheck</span> 等待 MySQL 真正就绪后再放行下一步</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 6 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border-2 border-accent bg-accent/5 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-[13px] flex-shrink-0">6</div>
+          <span class="badge b-back">③</span>
+          <i data-lucide="wand" class="w-5 h-5 text-accent flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800"><span class="map-back">Backend</span> 启动并执行兼容补丁</div>
+            <div class="text-[12px] text-slate-600">自动补齐 user_id 字段、唯一索引与 demo 账号，兼容旧库结构</div>
+          </div>
+        </div>
+        <div class="flex justify-center"><i data-lucide="chevron-down" class="w-4 h-4 text-accent"></i></div>
+        <!-- step 7 -->
+        <div class="flex items-center gap-2.5 bg-white rounded-lg border-2 border-amber-400 bg-amber-50 px-3 py-2">
+          <div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-[13px] flex-shrink-0">7</div>
+          <span class="badge b-nginx">④</span>
+          <i data-lucide="circle-check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+          <div class="flex-1">
+            <div class="text-[14px] font-semibold text-slate-800"><span class="map-nginx">Nginx</span> 入口就绪，系统对外可访问</div>
+            <div class="text-[12px] text-slate-600">作为统一入口反向代理 SPA 与 REST 接口，部署完成</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运行界面②：上传 / 预览 / 分享</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">运行界面 ② · 上传 / 预览 / 分享</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">SHARE &amp; PREVIEW</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+<span class="font-semibold text-primary">10</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-24 px-12 flex flex-col h-[640px] gap-4">
+    <div class="grid grid-cols-2 gap-5 flex-1">
+      <!-- 左：分享弹窗 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="share-2" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">分享创建弹窗</span>
+          <span class="ml-auto text-xs text-slate-400 font-mono">分享码 + 有效期</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-100 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/share_dialog.png" alt="分享弹窗" class="w-full h-full object-cover object-center"/>
+        </div>
+      </div>
+
+      <!-- 右：预览成功 -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-3 flex flex-col">
+        <div class="flex items-center gap-2 mb-2 px-2">
+          <i data-lucide="eye" class="w-4 h-4 text-primary"></i>
+          <span class="text-sm font-semibold text-slate-800">文件预览成功</span>
+          <span class="ml-auto text-xs text-slate-400 font-mono">/api/files</span>
+        </div>
+        <div class="flex-1 rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+          <img src="../assets/screenshots/preview.png" alt="预览成功" class="w-full h-full object-cover object-left"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary text-white rounded-xl px-5 py-3 flex items-start gap-3">
+      <i data-lucide="info" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+      <div class="text-[14px] leading-relaxed">
+        分享弹窗生成<span class="font-semibold text-accent">分享码 + 有效期</span>，匿名用户凭码即可访问；预览页面通过后端下发<span class="font-semibold text-accent">预览链接 + 签名校验</span>，在反向代理下稳定返回 PDF、图片、音视频等多格式内容。
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

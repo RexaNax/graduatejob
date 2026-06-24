@@ -1,0 +1,86 @@
+{
+  "title": "基于容器化部署的云文件管理系统设计与实现-答辩PPT",
+  "theme": "1. 整体风格：本科毕业设计答辩 PPT，蓝白学术风，端庄克制不浮夸；图片与流程图为主，文字精简，每页都满足'图 70% + 字 30%'。\n2. 配色：主色深蓝 #0F4C82（primary）、辅色 #1F497D（secondary）、强调色 #2A9FD6（accent）、正文色 #1E293B、辅助灰 #64748B。\n3. 背景：极浅蓝灰 #F7FAFD 作为内容页底色，封面与结尾页用深蓝 #0A2442；内容容器统一为白色卡片配 1px 浅边框 + 极淡阴影。\n4. 母版：每页左侧一道 4px 宽的深蓝竖条；顶部标题区由蓝色小条 + 中文页标题构成；除封面/目录/结尾外右下角统一显示页码 'xx / 13'。\n5. 字体：中文标题使用 Microsoft YaHei / PingFang SC（font-heading），正文使用 Noto Sans SC / Inter（font-body），代码使用 Consolas / monospace。\n6. 视觉元素：使用 Lucide 图标点缀，禁止手写 SVG 图标；流程图节点统一使用圆角矩形 + 蓝色描边；运行截图直接放原图，仅做圆角 + 浅描边处理。",
+  "slides": [
+    {
+      "file": "slide_001.html",
+      "type": "title",
+      "title": "基于容器化部署的云文件管理系统设计与实现",
+      "content_spec": "封面：深蓝学术封面，居中展示论文题目（中文一行），副标题英文小字；底部信息块包含学生'杨佳星'、学号'04222088'、班级'2203'、学院专业'计算机学院 网络工程'、指导教师'王晓梅'、答辩日期'2026 年 6 月'、学校'西安邮电大学'。",
+      "local_theme": "深蓝 #0A2442 全屏背景，右上角和左下角添加几何装饰；标题使用大字号白色，整体居中对称。"
+    },
+    {
+      "file": "slide_002.html",
+      "type": "content",
+      "title": "目录",
+      "content_spec": "汇报目录页：4 个并列编号卡片，分别为'一 选题背景与研究目标'、'二 系统设计与容器化部署'、'三 核心功能实现'、'四 运行展示与总结'；每个卡片顶部一个圆形大数字（01-04），下方一行中文小标题，右侧带 Lucide 图标点缀；不要塞过多说明文字。"
+    },
+    {
+      "file": "slide_003.html",
+      "type": "content",
+      "title": "研究背景与意义",
+      "content_spec": "图为主、字极少：左右对照视觉。左侧'传统部署痛点'区使用 4 个红色/橙色 Lucide 图标（如 alert-triangle / settings / hard-drive / lock）配上 8 字短语：环境耦合、依赖版本、初始化脚本、目录权限。中间一个箭头 chevrons-right 表示'容器化'。右侧'容器化方案'区使用 4 个蓝色 Lucide 图标（如 zap / package / database / refresh-cw）配 8 字短语：一键启动、版本钉死、数据持久化、跨机一致复现。底部一行结论：'本课题关注的不是能不能做出来，而是系统能否稳定部署 / 运行 / 演示 / 验证'。除此之外不要堆任何文字。"
+    },
+    {
+      "file": "slide_004.html",
+      "type": "content",
+      "title": "研究目标与技术路线",
+      "content_spec": "上下两区合并研究目标和技术路线：上半区 8 个目标方块（2 行 4 列），分别是登录认证 / 文件上传 / 目录管理 / 在线预览 / 分享访问 / 回收站 / 存储统计 / 容器化部署，每块带一个 Lucide 图标和一行 4 字标题；下半区 6 块技术路线横向时间轴：前端(Vue3+ElementPlus+Vite) → 后端(Spring Boot 3.2.2 + MyBatis-Plus) → 安全(JWT+BCrypt) → 数据(MySQL 8 + Redis 7) → 部署(Nginx + Docker Compose) → 文件处理(Aspose+PDFBox+JAVE)。底部小字一行边界说明：'不做多租户 / 不做完整 RBAC / 不做配额管理'。"
+    },
+    {
+      "file": "slide_005.html",
+      "type": "content",
+      "title": "系统总体架构",
+      "content_spec": "左大图右说明的 7:5 布局。左侧占 7 列直接放 figures/fig_3_1_system_architecture.png 大图（圆角 + 浅边框）。右侧占 5 列做 5 行卡片堆叠，每行卡片左侧一个 Lucide 图标、右侧一行小标题加一行说明，依次：表现层（Vue 3 SPA 多视图前端）/ 业务层（Spring Boot REST 接口）/ 数据层（MySQL 元数据 + Redis 临时状态）/ 部署层（Nginx 静态资源 + 反向代理）/ 文件处理层（Aspose / PDFBox / JAVE 多格式预览）。"
+    },
+    {
+      "file": "slide_006.html",
+      "type": "content",
+      "title": "容器化部署：Compose 编排 + 启动流程",
+      "content_spec": "左右双栏：左侧 600px 宽展示 deploy/docker-compose.yml 真实片段（深色 IDE 风格代码块，含 nginx/backend/mysql/redis 4 个 service 与 networks/volumes 区块，关键字着色），头部带文件名条与红黄绿 macOS 圆点；右侧自适应宽度展示纵向 7 步启动流程：① 启动命令下发 ② 拉取/构建镜像 ③ 创建网络与数据卷 ④ 启动 MySQL+Redis ⑤ 健康检查通过 ⑥ 后端启动+兼容补丁 ⑦ Nginx 入口就绪，每步圆角矩形 + 步骤号 + Lucide 图标 + 一行说明，节点之间用 chevron-down 连接。顶部 docker compose up -d --build 命令条作为右侧入口，与左侧 yml 形成'配置-启动'对应关系。"
+    },
+    {
+      "file": "slide_008.html",
+      "type": "content",
+      "title": "核心实现①：文件上传与管理",
+      "content_spec": "上下分区。上半区占 60% 高度放 figures/fig_4_3_upload_flow.png 大图（居中，圆角浅边框）。下半区 3 个并列要点卡片：① 物理 + 元数据双写（图标 hard-drive，物理文件落 /files，元数据写 lfs_file 表）② MD5 秒传机制（图标 zap，相同内容只占一份空间）③ 软删除入回收站（图标 trash-2，删除是标记不立即物理删除）。"
+    },
+    {
+      "file": "slide_010.html",
+      "type": "content",
+      "title": "核心实现②：JWT 鉴权与用户隔离",
+      "content_spec": "工程亮点页（标题旁带'★ 工程亮点'红色小标签）。顶部展示 JWT 5 步横向流程：① 登录签发（JwtConfig.genUserToken）② 请求携带（Header: token，无 cookie/session）③ 校验解析（parseToken 验签 + 过期检查，非法 401）④ 注入上下文（CurrentUserService 取出 userId）⑤ 数据隔离（SQL WHERE user_id=?）。中部 3 个亮点卡片：无状态易扩展 / HMAC 签名防伪造 / 后端强制隔离不靠前端。底部一条深蓝小字带：现场演示账号 admin（管理员视角）+ demo（普通用户视角），两个账号登录后获得各自 token，看到的文件空间互不可见。基于 com.auth0 java-jwt 库 + token-expire 14400s 实现。"
+    },
+    {
+      "file": "slide_012.html",
+      "type": "content",
+      "title": "运行界面①：登录与文件空间",
+      "content_spec": "左右双图布局：左侧约 48% 宽度放 docx_media/image14.png（登录页 macOS 风格背景），右侧约 48% 宽度放 docx_media/image18.png（文件列表主界面）。两张图都使用圆角 12px + 浅蓝边框 + 极淡阴影。每张图下方一行小说明：左图'登录入口'、右图'文件空间主界面'。页面底部一行总结：'系统作为 Web 应用的基础状态，为后续上传 / 预览 / 分享 / 回收提供入口'。除此外不要堆其他文字。"
+    },
+    {
+      "file": "slide_013.html",
+      "type": "content",
+      "title": "运行界面②：上传 / 预览 / 分享",
+      "content_spec": "左右双图布局：左侧约 48% 宽度放 docx_media/image22.png（分享创建弹窗），右侧约 48% 宽度放 docx_media/image19.png（文件预览成功）。同样圆角 + 浅蓝边框。两图下方各一行小说明：左图'分享码 + 有效期'、右图'预览链路稳定返回'。底部一行总结：'分享访问匿名可达，预览链路在反向代理下稳定工作'。"
+    },
+    {
+      "file": "slide_014.html",
+      "type": "content",
+      "title": "运行界面③：容器运行状态",
+      "content_spec": "左右双图布局：左侧约 48% 宽度放 docx_media/image29.png（docker ps 容器列表，4 容器全 Up），右侧约 48% 宽度放 docx_media/image32.png（终端跑自动化测试，24 用例 PASS）。终端图保留深色背景质感。两图下方各一行小说明：左图'docker ps 容器全部 Up'、右图'24 个自动化用例全量通过'。底部一行总结：'部署到业务的完整闭环均稳定运行'。"
+    },
+    {
+      "file": "slide_015.html",
+      "type": "content",
+      "title": "总结与展望",
+      "content_spec": "左右双栏。左栏标题'已完成工作'（绿色对勾或圆点编号），4 行：① 完整业务闭环（登录 / 上传 / 目录 / 预览 / 分享 / 回收 / 统计）② 容器化一键部署（4 容器 Compose 编排，跨机一致复现）③ 预览链路修复（secret+expire 签名 + 路径归一化）④ 轻量双用户隔离（user_id 字段后端隔离）。右栏标题'不足与展望'（橙色小三角或图标），3 行：① 权限模型简单，未引入完整 RBAC ② 存储以本地目录为主，未接入对象存储 OSS ③ 监控运维基础，缺少日志聚合与指标采集。下方一行小字：'后续可扩展方向：团队空间 / 对象存储 / 分享策略升级 / 日志监控'。"
+    },
+    {
+      "file": "slide_016.html",
+      "type": "title",
+      "title": "致谢",
+      "content_spec": "结尾页：深蓝 #0A2442 全屏背景，居中大字'敬请各位老师批评指正'（白色 text-6xl 加粗），上方一行小字'感谢指导教师王晓梅老师，感谢评审组各位老师'。背景可加几何装饰呼应封面。",
+      "local_theme": "深蓝全屏背景，与封面页风格呼应；不需要左侧竖条与页码。"
+    }
+  ]
+}

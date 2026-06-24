@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>核心实现①：文件上传与管理</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">核心实现 ① · 文件上传与管理</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">FILE UPLOAD &amp; MANAGEMENT</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+      <span class="font-semibold text-primary">07</span><span class="mx-1">/</span><span>13</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-20 px-12 flex flex-col h-[640px] gap-4 justify-between">
+
+    <!-- 上：上传 6 步流程 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-1 h-5 bg-accent"></div>
+          <span class="text-[15px] font-heading font-semibold text-slate-800">图 4.3 · 文件上传链路（前端 → 鉴权 → 落盘 → 入库）</span>
+        </div>
+        <span class="text-xs text-slate-400">Upload Pipeline</span>
+      </div>
+
+      <div class="grid grid-cols-6 gap-2 items-stretch">
+        <!-- 1 选择文件 -->
+        <div class="relative bg-white border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-[12px]">1</div>
+          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+            <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-primary"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">用户选择文件</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-snug">前端选择 / 拖拽</div>
+        </div>
+        <!-- 2 携 JWT 上传 -->
+        <div class="relative bg-white border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-[12px]">2</div>
+          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+            <i data-lucide="upload-cloud" class="w-6 h-6 text-primary"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">携 JWT 上传</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-snug font-mono">POST /api/file/upload</div>
+        </div>
+        <!-- 3 鉴权与解析 -->
+        <div class="relative bg-white border-2 border-accent bg-accent/5 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-[12px]">3</div>
+          <div class="w-11 h-11 rounded-lg bg-accent flex items-center justify-center mb-2">
+            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">JWT 校验 + 解析 user_id</div>
+          <div class="text-[12px] text-slate-600 mt-1 leading-snug">CurrentUserService</div>
+        </div>
+        <!-- 4 MD5 秒传判断 -->
+        <div class="relative bg-white border-2 border-amber-400 bg-amber-50 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-[12px]">4</div>
+          <div class="w-11 h-11 rounded-lg bg-amber-500 flex items-center justify-center mb-2">
+            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">MD5 秒传判断</div>
+          <div class="text-[12px] text-slate-600 mt-1 leading-snug">命中则跳过落盘</div>
+        </div>
+        <!-- 5 物理落盘 -->
+        <div class="relative bg-white border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-[12px]">5</div>
+          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+            <i data-lucide="hard-drive-download" class="w-6 h-6 text-primary"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">物理文件落盘</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-snug font-mono">/files/{uuid}</div>
+        </div>
+        <!-- 6 元数据入库 -->
+        <div class="relative bg-white border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center">
+          <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-[12px]">6</div>
+          <div class="w-11 h-11 rounded-lg bg-emerald-100 flex items-center justify-center mb-2">
+            <i data-lucide="database" class="w-6 h-6 text-emerald-600"></i>
+          </div>
+          <div class="text-[14px] font-semibold text-slate-800 leading-tight">元数据入库</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-snug">lfs_file (user_id / parent_id)</div>
+        </div>
+      </div>
+
+      <div class="mt-3 flex items-center gap-3 text-[12px] text-slate-600">
+        <span class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-accent"></span>步骤 3：JWT 鉴权拦截，匿名请求直接 401</span>
+        <span class="text-slate-300">|</span>
+        <span class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-amber-500"></span>步骤 4：MD5 秒传，相同内容只占一份物理空间</span>
+        <span class="text-slate-300">|</span>
+        <span class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-emerald-500"></span>步骤 6：物理 + 元数据双写保一致</span>
+      </div>
+    </div>
+
+    <!-- 中：MD5 秒传效果对比图（替代原 FileService.upload 代码块）+ REST 接口表 -->
+    <div class="grid grid-cols-2 gap-4">
+      <!-- 左：MD5 秒传效果对比 -->
+      <div class="bg-white border border-slate-200 rounded-xl px-4 py-3">
+        <div class="flex items-center gap-2 mb-2">
+          <i data-lucide="git-compare" class="w-5 h-5 text-amber-500"></i>
+          <span class="text-[14px] font-semibold text-slate-800">MD5 秒传效果对比</span>
+          <span class="ml-auto text-[11px] text-slate-400">同一文件被不同用户重复上传</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <!-- 普通上传 -->
+          <div class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="upload" class="w-4 h-4 text-slate-500"></i>
+              <span class="text-[12px] font-semibold text-slate-700">普通上传</span>
+            </div>
+            <div class="text-[11px] text-slate-600 leading-relaxed">
+              <div class="flex justify-between"><span>耗时</span><span class="font-mono text-rose-600 font-semibold">≈ 数秒</span></div>
+              <div class="flex justify-between"><span>占用</span><span class="font-mono text-rose-600 font-semibold">N × 文件大小</span></div>
+              <div class="flex justify-between"><span>磁盘 I/O</span><span class="font-mono text-rose-600 font-semibold">每次都写</span></div>
+            </div>
+          </div>
+          <!-- 秒传命中 -->
+          <div class="bg-amber-50 border-2 border-amber-400 rounded-lg px-3 py-2">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="zap" class="w-4 h-4 text-amber-600"></i>
+              <span class="text-[12px] font-semibold text-amber-700">秒传命中</span>
+            </div>
+            <div class="text-[11px] text-slate-700 leading-relaxed">
+              <div class="flex justify-between"><span>耗时</span><span class="font-mono text-emerald-600 font-semibold">毫秒级</span></div>
+              <div class="flex justify-between"><span>占用</span><span class="font-mono text-emerald-600 font-semibold">仅 1 份物理</span></div>
+              <div class="flex justify-between"><span>磁盘 I/O</span><span class="font-mono text-emerald-600 font-semibold">0 字节增量</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 text-[11px] text-slate-500 leading-snug flex items-center gap-1">
+          <i data-lucide="info" class="w-3 h-3 text-slate-400"></i>
+          <span>逻辑：上传前算 MD5，命中已有 record 直接复用，不命中再落盘</span>
+        </div>
+      </div>
+
+      <!-- 右：REST 接口 -->
+      <div class="bg-white rounded-xl border border-slate-200 px-4 py-3">
+        <div class="flex items-center gap-2 mb-2">
+          <i data-lucide="plug" class="w-5 h-5 text-primary"></i>
+          <span class="text-[14px] font-semibold text-slate-800">FileController · 主要接口</span>
+          <span class="ml-auto text-[11px] text-slate-400 font-mono">/api/file</span>
+        </div>
+        <div class="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[12px]">
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-mono text-[11px] font-bold">POST</span><span class="font-mono text-slate-700">/upload</span></div>
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-sky-100 text-sky-700 font-mono text-[11px] font-bold">GET</span><span class="font-mono text-slate-700">/list?parentId=</span></div>
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-sky-100 text-sky-700 font-mono text-[11px] font-bold">GET</span><span class="font-mono text-slate-700">/preview/{id}</span></div>
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-sky-100 text-sky-700 font-mono text-[11px] font-bold">GET</span><span class="font-mono text-slate-700">/download/{id}</span></div>
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 font-mono text-[11px] font-bold">DEL</span><span class="font-mono text-slate-700">/{id} → recycle</span></div>
+          <div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-mono text-[11px] font-bold">POST</span><span class="font-mono text-slate-700">/recycle/restore</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下：3 个要点卡片 -->
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="hard-drive" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div class="flex-1">
+          <div class="text-[15px] font-semibold text-slate-800">物理文件 + 元数据双写</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-relaxed">物理文件落到 <span class="font-mono text-primary">/files</span>，元数据写入 <span class="font-mono text-primary">lfs_file</span> 表，含 user_id / parent_id / is_dir</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border-2 border-accent bg-accent/5 p-4 flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+          <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+        </div>
+        <div class="flex-1">
+          <div class="text-[15px] font-semibold text-slate-800">MD5 秒传机制</div>
+          <div class="text-[12px] text-slate-600 mt-1 leading-relaxed">上传前计算 MD5，相同内容只占一份物理空间，多人重复上传同一文件可显著节省存储</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="trash-2" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div class="flex-1">
+          <div class="text-[15px] font-semibold text-slate-800">软删除入回收站</div>
+          <div class="text-[12px] text-slate-500 mt-1 leading-relaxed">删除仅标记 <span class="font-mono text-primary">deleted_at</span>，不立即物理删除，支持从回收站一键恢复</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

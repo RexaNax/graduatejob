@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>容器编排关系</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0F4C82',
+          secondary: '#1F497D',
+          accent: '#2A9FD6'
+        },
+        fontFamily: {
+          heading: ['Microsoft YaHei', 'PingFang SC', 'sans-serif'],
+          body: ['Noto Sans SC', 'Inter', 'Arial', 'sans-serif'],
+          mono: ['Consolas', 'Menlo', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative font-body">
+  <div class="absolute inset-0 z-0 bg-[#F7FAFD]"></div>
+  <div class="absolute top-0 left-0 w-1.5 h-full bg-primary z-10"></div>
+  <div class="absolute top-0 left-0 right-0 h-16 bg-white z-10 flex items-center px-16 border-b border-slate-200">
+    <div class="w-1 h-7 bg-accent mr-4"></div>
+    <span class="font-heading text-primary text-xl font-semibold">容器编排关系</span>
+    <span class="ml-3 text-slate-400 text-sm tracking-widest">CONTAINER ORCHESTRATION</span>
+    <span class="ml-3 px-2 py-0.5 rounded bg-accent/10 text-accent text-xs font-semibold">★ 重点</span>
+    <div class="ml-auto flex items-center text-slate-400 text-sm">
+      <span class="font-semibold text-primary">07</span><span class="mx-1">/</span><span>16</span>
+    </div>
+  </div>
+
+  <div class="relative z-20 pt-20 px-12 flex flex-col h-[640px]">
+
+    <!-- 浏览器入口 -->
+    <div class="flex justify-center mb-2">
+      <div class="bg-white rounded-xl border border-slate-300 px-5 py-2 flex items-center gap-3 shadow-sm">
+        <i data-lucide="globe" class="w-5 h-5 text-primary"></i>
+        <span class="font-semibold text-slate-800">浏览器</span>
+        <span class="text-xs text-slate-400 font-mono">HTTP / HTTPS</span>
+      </div>
+    </div>
+    <!-- 向下箭头 -->
+    <div class="flex justify-center my-1">
+      <i data-lucide="arrow-down" class="w-5 h-5 text-accent"></i>
+    </div>
+
+    <!-- 4 容器卡片 -->
+    <div class="grid grid-cols-4 gap-3 mb-2">
+      <!-- nginx -->
+      <div class="bg-white rounded-xl border-2 border-primary p-4 relative">
+        <div class="absolute -top-3 left-4 bg-primary text-white text-xs font-semibold px-2 py-0.5 rounded">入口容器</div>
+        <div class="flex items-center gap-2 mb-2 mt-1">
+          <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+            <i data-lucide="globe" class="w-4 h-4 text-primary"></i>
+          </div>
+          <span class="font-mono text-sm font-semibold text-slate-800">lfs-nginx</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="flex justify-between"><span class="text-slate-400">镜像</span><span class="font-mono text-slate-700">nginx:alpine</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">端口</span><span class="font-mono text-accent font-semibold">80</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">内存</span><span class="font-mono text-slate-700">~50M</span></div>
+        </div>
+        <div class="mt-2 pt-2 border-t border-slate-100 text-xs text-slate-600">静态资源 + 反向代理</div>
+      </div>
+      <!-- backend -->
+      <div class="bg-white rounded-xl border-2 border-accent p-4 relative">
+        <div class="absolute -top-3 left-4 bg-accent text-white text-xs font-semibold px-2 py-0.5 rounded">业务容器</div>
+        <div class="flex items-center gap-2 mb-2 mt-1">
+          <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+            <i data-lucide="server-cog" class="w-4 h-4 text-accent"></i>
+          </div>
+          <span class="font-mono text-sm font-semibold text-slate-800">lfs-backend</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="flex justify-between"><span class="text-slate-400">镜像</span><span class="font-mono text-slate-700">OpenJDK 17</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">端口</span><span class="font-mono text-accent font-semibold">8080</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">内存</span><span class="font-mono text-slate-700">~600M</span></div>
+        </div>
+        <div class="mt-2 pt-2 border-t border-slate-100 text-xs text-slate-600">Spring Boot 业务接口</div>
+      </div>
+      <!-- mysql -->
+      <div class="bg-white rounded-xl border border-slate-300 p-4 relative">
+        <div class="absolute -top-3 left-4 bg-slate-700 text-white text-xs font-semibold px-2 py-0.5 rounded">数据容器</div>
+        <div class="flex items-center gap-2 mb-2 mt-1">
+          <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+            <i data-lucide="database" class="w-4 h-4 text-slate-700"></i>
+          </div>
+          <span class="font-mono text-sm font-semibold text-slate-800">lfs-mysql</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="flex justify-between"><span class="text-slate-400">镜像</span><span class="font-mono text-slate-700">mysql:8</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">端口</span><span class="font-mono text-slate-700 font-semibold">3306</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">内存</span><span class="font-mono text-slate-700">~330M</span></div>
+        </div>
+        <div class="mt-2 pt-2 border-t border-slate-100 text-xs text-slate-600">业务数据持久化</div>
+      </div>
+      <!-- redis -->
+      <div class="bg-white rounded-xl border border-slate-300 p-4 relative">
+        <div class="absolute -top-3 left-4 bg-rose-500 text-white text-xs font-semibold px-2 py-0.5 rounded">缓存容器</div>
+        <div class="flex items-center gap-2 mb-2 mt-1">
+          <div class="w-8 h-8 rounded-lg bg-rose-50 flex items-center justify-center">
+            <i data-lucide="zap" class="w-4 h-4 text-rose-500"></i>
+          </div>
+          <span class="font-mono text-sm font-semibold text-slate-800">lfs-redis</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="flex justify-between"><span class="text-slate-400">镜像</span><span class="font-mono text-slate-700">redis:7-alpine</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">端口</span><span class="font-mono text-slate-700 font-semibold">6379</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">内存</span><span class="font-mono text-slate-700">~5M</span></div>
+        </div>
+        <div class="mt-2 pt-2 border-t border-slate-100 text-xs text-slate-600">分片状态 / 转码进度</div>
+      </div>
+    </div>
+
+    <!-- 调用关系图（用 SVG 画连线） -->
+    <div class="relative h-[80px] my-1">
+      <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <!-- nginx -> backend -->
+        <path d="M 150 0 Q 150 40 450 40 Q 450 40 450 80" stroke="#2A9FD6" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+        <!-- backend -> mysql -->
+        <path d="M 450 0 Q 450 40 750 40 Q 750 40 750 80" stroke="#0F4C82" stroke-width="2" fill="none"/>
+        <!-- backend -> redis -->
+        <path d="M 450 0 Q 450 40 1050 40 Q 1050 40 1050 80" stroke="#0F4C82" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="absolute top-2 left-[20%] text-xs text-accent font-medium">/api 反代</div>
+      <div class="absolute top-2 left-[48%] text-xs text-primary font-medium">JDBC</div>
+      <div class="absolute top-2 right-[12%] text-xs text-primary font-medium">Redis 协议</div>
+    </div>
+
+    <!-- 数据卷一行 -->
+    <div class="bg-white rounded-xl border border-slate-200 p-3 mt-1">
+      <div class="flex items-center gap-3 mb-2">
+        <i data-lucide="hard-drive" class="w-4 h-4 text-primary"></i>
+        <span class="font-heading text-sm font-semibold text-slate-800">数据卷映射 · 容器销毁数据不丢失</span>
+      </div>
+      <div class="grid grid-cols-4 gap-2">
+        <div class="bg-slate-50 rounded-md px-3 py-2 flex items-center gap-2 border border-slate-100">
+          <i data-lucide="folder" class="w-4 h-4 text-slate-500"></i>
+          <span class="font-mono text-xs text-slate-700">./files</span>
+          <span class="text-xs text-slate-400 ml-auto">上传文件</span>
+        </div>
+        <div class="bg-slate-50 rounded-md px-3 py-2 flex items-center gap-2 border border-slate-100">
+          <i data-lucide="folder" class="w-4 h-4 text-slate-500"></i>
+          <span class="font-mono text-xs text-slate-700">./mysql-data</span>
+          <span class="text-xs text-slate-400 ml-auto">业务数据</span>
+        </div>
+        <div class="bg-slate-50 rounded-md px-3 py-2 flex items-center gap-2 border border-slate-100">
+          <i data-lucide="folder" class="w-4 h-4 text-slate-500"></i>
+          <span class="font-mono text-xs text-slate-700">./redis-data</span>
+          <span class="text-xs text-slate-400 ml-auto">缓存快照</span>
+        </div>
+        <div class="bg-slate-50 rounded-md px-3 py-2 flex items-center gap-2 border border-slate-100">
+          <i data-lucide="folder" class="w-4 h-4 text-slate-500"></i>
+          <span class="font-mono text-xs text-slate-700">./nginx-conf</span>
+          <span class="text-xs text-slate-400 ml-auto">配置文件</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部金句 -->
+    <div class="bg-primary text-white rounded-xl px-5 py-2.5 flex items-center gap-3 mt-2">
+      <i data-lucide="layers-2" class="w-4 h-4 text-accent flex-shrink-0"></i>
+      <div class="text-sm">
+        <span class="font-semibold text-accent">4 容器协同</span> 支撑全部功能 — 上传 · 预览 · 分享 · 回收 · 统计
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
