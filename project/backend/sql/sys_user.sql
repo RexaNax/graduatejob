@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS sys_user (
+    id          BIGINT(20)   NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+    username    VARCHAR(50)  NOT NULL COMMENT '用户名（登录账号）',
+    password    VARCHAR(100) NOT NULL COMMENT '密码（BCrypt加密）',
+    nickname    VARCHAR(50)  DEFAULT '' COMMENT '昵称',
+    avatar      VARCHAR(255) DEFAULT '' COMMENT '头像URL',
+    status      TINYINT(1)   DEFAULT 1 COMMENT '状态：0禁用，1启用',
+    create_time DATETIME(3)  DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+    update_time DATETIME(3)  DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间',
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_username (username)
+) ENGINE=InnoDB AUTO_INCREMENT=1 COMMENT='用户表';
+
+INSERT INTO sys_user (username, password, nickname, status) VALUES
+('admin', '$2a$10$C5LAWEU.5HoX91ve2D7Iv.kJGlJuWt5P.on5sgCuIttsMasWe5ftu', '管理员', 1),
+('demo', '$2a$10$C5LAWEU.5HoX91ve2D7Iv.kJGlJuWt5P.on5sgCuIttsMasWe5ftu', '演示用户', 1)
+ON DUPLICATE KEY UPDATE username = username;
