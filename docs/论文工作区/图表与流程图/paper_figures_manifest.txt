@@ -1,0 +1,11 @@
+论文图表生成清单
+
+- fig_3_1_system_architecture.svg：2400×1700；图名备注：图 3.1  系统总体架构图；PNG：已生成
+- fig_3_2_network_access.svg：2500×1700；图名备注：图 3.2  系统网络访问关系图；PNG：已生成
+- fig_3_3_module_structure.svg：2700×1700；图名备注：图 3.3  系统功能模块结构图；PNG：已生成
+- fig_3_4_er_diagram.svg：2600×1700；图名备注：图 3.4  数据库 E-R 图；PNG：已生成
+- fig_3_5_api_access.svg：3400×1850；图名备注：图 3.5  系统接口与访问关系图；PNG：已生成
+- fig_4_1_login_flow.svg：2600×1250；图名备注：图 4.1  用户登录流程图；PNG：已生成
+- fig_4_3_upload_flow.svg：2850×1650；图名备注：图 4.3  文件上传流程图；PNG：已生成
+- fig_4_8_preview_chain.svg：3050×1500；图名备注：图 4.8  文件预览访问链路图；PNG：已生成
+- fig_5_1_test_scope.svg：2600×1800；图名备注：图 5.1  测试范围与系统模块对照图；PNG：已生成
