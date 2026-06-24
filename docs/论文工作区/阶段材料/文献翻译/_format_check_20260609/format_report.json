@@ -1,0 +1,3067 @@
+{
+  "target_summary_first120": [
+    {
+      "idx": 7,
+      "text": "本科毕业设计（论文）英文翻译",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "600",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "48",
+        "ascii": null,
+        "eastAsia": "方正黑体简体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 12,
+      "text": "学生姓名：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 13,
+      "text": "杨佳星",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 14,
+      "text": "学 号：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 15,
+      "text": "04222088",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 16,
+      "text": "班 级：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 17,
+      "text": "2203",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 18,
+      "text": "专 业：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 19,
+      "text": "网络工程",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 20,
+      "text": "院 （系）：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 21,
+      "text": "计算机学院",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 22,
+      "text": "指导教师：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 23,
+      "text": "王晓梅",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 25,
+      "text": "二零二六年四月",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "30",
+        "lineRule": "atLeast",
+        "before": "312",
+        "after": null,
+        "firstLine": "986",
+        "sz": "32",
+        "ascii": "宋体",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 27,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "240",
+        "after": "240",
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 28,
+      "text": "英文来源：Pahl C, Brogi A, Soldani J, Jamshidi P. Cloud Container Technologies: A State-of-the-Art Review",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 29,
+      "text": "起 止 页 码：677-692",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 30,
+      "text": "出版日期（期刊号）：2019 年 7 月，Vol. 7, No. 3",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 31,
+      "text": "刊 物 名 称：IEEE Transactions on Cloud Computing（IEEE 云计算汇刊）",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 32,
+      "text": "DOI：10.1109/TCC.2017.2702586",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 34,
+      "text": "Cloud Container Technologies: a State-of-the-Art Review",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 35,
+      "text": "Abstract",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 36,
+      "text": "Containers as a lightweight technology to virtualise applications have recently been successful, par",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 37,
+      "text": "Keywords",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 38,
+      "text": "Orchestration, Container, Cluster, Cloud, Systematic Literature Review, Systematic Mapping Study.",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 39,
+      "text": "I. INTRODUCTION",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 40,
+      "text": "Containerisation is a technology to virtualise applications in a lightweight way that has resulted i",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 41,
+      "text": "Our mapping study resulted in a knowledge base of current research approaches, methods, techniques, ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 42,
+      "text": "Container-based orchestration techniques hence emerge as a mechanism to orchestrate computation in c",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 43,
+      "text": "II. CONTAINER ARCHITECTURES AND THEIR MANAGEMENT",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 44,
+      "text": "The cloud uses virtualisation techniques to achieve elasticity of large-scale shared resources (Mell",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 45,
+      "text": "A. Container Technology Principles",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 46,
+      "text": "A container holds packaged self-contained, ready-to-deploy parts of applications and, if necessary, ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 47,
+      "text": "Many container solutions are based on Linux LXC techniques. Recent Linux distributions, part of the ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 48,
+      "text": "Containerisation facilitates the step from single applications in containers to clusters of containe",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 49,
+      "text": "B. Cloud-based Container Architectures",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 50,
+      "text": "Container orchestration deals not only with turning applications on or off, that is, starting or sto",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 51,
+      "text": "The cloud can be seen as a distributed and tiered architecture with core infrastructure, platform an",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 52,
+      "text": "C. State-of-the-Art",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 53,
+      "text": "The mechanism we use to review cloud container techniques is that of a systematic mapping study. Rev",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 54,
+      "text": "As part of our paper selection process, we extracted six review papers that are related to our aim. ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 55,
+      "text": "III. RESEARCH METHODOLOGY",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 56,
+      "text": "A. A Systematic Mapping Process",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 57,
+      "text": "SMSs reduce bias through a rigorous sequence of methodological steps to search and classify literatu",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 58,
+      "text": "We have adapted and applied a systematic mapping to cloud technology in a study focusing on containe",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 59,
+      "text": "We can also clarify the general goal and scope of the study using the PICO (Population, Intervention",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 60,
+      "text": "B. Definition of Research Questions (Review Scope)",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 61,
+      "text": "As the next activity, we define the research questions to help shape the review protocol. The main g",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 62,
+      "text": "C. Search for Primary Studies",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 63,
+      "text": "The selection of search terms is based on Petersen et al. (2008) and guided by the research question",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 64,
+      "text": "TABLE I: Research Questions (RQ)",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 65,
+      "text": "RQ1 (Research Application): Why, in which cloud activities and how have container-based approaches b",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 66,
+      "text": "RQ2 (Research Distribution): In which sources and when have studies on container technologies in clo",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 67,
+      "text": "RQ3 (Maturity): What is the degree of maturity of the field? The research approaches and evaluation ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 68,
+      "text": "RQ4 (Trends): What are the concerns and what is the future research agenda? The aim is to understand",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 69,
+      "text": "D. Inclusion and Exclusion Criteria",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 70,
+      "text": "After the initial collection of candidate studies, inclusion and exclusion criteria were applied to ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 71,
+      "text": "E. Classification and Data Extraction",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 72,
+      "text": "The 46 selected studies were then mapped against the characterisation framework introduced in Sectio",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 73,
+      "text": "",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": null,
+        "ascii": null,
+        "eastAsia": null,
+        "bold": null
+      },
+      "pageBreak": true,
+      "sect": false
+    },
+    {
+      "idx": 74,
+      "text": "二、中文译文",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "240",
+        "after": "240",
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 75,
+      "text": "云容器技术：研究现状综述",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 76,
+      "text": "摘要",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 77,
+      "text": "容器作为一种轻量级的应用虚拟化技术，近年来取得了显著成功，尤其适用于云环境中的应用管理。很多情况下，容器集群的管理变得十分必要，而容器构建与部署过程的编排也随之成为核心问题。尽管这一新兴主题已经受到研",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 78,
+      "text": "关键词",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 79,
+      "text": "编排，容器，集群，云，系统文献综述，系统映射研究。",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 80,
+      "text": "一、引言",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 81,
+      "text": "容器化是一种以轻量级方式实现应用虚拟化的技术，这种技术已经在云应用管理中得到广泛采用。如何对单个容器以及容器集群的构建与部署进行编排，已经成为一个核心问题。当前尚缺少针对云环境中容器技术研究的二次研究",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 82,
+      "text": "二次研究的作用在于识别、分类和综合已有研究成果，从而形成对研究现状的比较性总体认识，并对正在开展的工作进行评价。作者选择采用系统映射研究方法，是因为这一方法更适合用来梳理和构建一个新兴研究领域。本文对",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 83,
+      "text": "本文共选取了 46 篇研究文献，时间跨度超过十年，从 2007 年开始。作者基于一个特征化框架对这些文献进行了分类与比较，并由此形成了一个关于当前研究方法、技术手段、最佳实践以及经验总结的知识库，重点",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 84,
+      "text": "系统映射研究还表明，以 LXC、Docker 为代表的容器技术正在被越来越广泛地使用。一方面，它们作为基础设施即服务（IaaS）层面的轻量级虚拟化方案；另一方面，它们又作为平台即服务（PaaS）层面的",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 85,
+      "text": "因此，基于容器的编排技术逐渐成为一种在云化集群环境中组织计算资源的重要机制。研究结果还表明，这类技术被视为平衡技术质量管理需求的一种有效方式，例如能够更好地优化资源利用率与系统性能，而这些因素在按需计",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 86,
+      "text": "二、容器架构及其管理",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 87,
+      "text": "云计算通过虚拟化技术实现大规模共享资源的弹性调度。传统上，虚拟机通常是基础设施层的核心支撑。而容器化则不同，它通过从镜像仓库中获取单个镜像，并据此定制构建容器应用包，实现了一种更轻量级的虚拟化方式。与",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 88,
+      "text": "2.1 容器技术原理",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 89,
+      "text": "容器中封装的是应用的自包含、可直接部署的组成部分，如果有需要，还包括运行应用所需的中间件与业务逻辑，以及相应的二进制文件和库。像 Docker 这样的工具建立在容器引擎之上，其中容器充当一种可移植的应",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 90,
+      "text": "很多容器方案都基于 Linux 的 LXC 技术。近年来的 Linux 发行版，作为 Linux 容器项目 LXC 的组成部分，提供了命名空间和 cgroups 等内核机制，用于在共享操作系统之上对进",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 91,
+      "text": "容器化进一步推动了系统从“单个应用运行于容器中”向“多个容器主机构成集群并跨主机运行容器化应用”的演进。后者充分利用了容器天然具备的互操作性。多个单独的容器主机会被组织成互联集群，每个集群由若干主机节",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 92,
+      "text": "2.2 基于云的容器架构",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 93,
+      "text": "容器编排不仅仅是简单地打开或关闭应用，也不仅仅是启动、停止容器或在服务器之间迁移容器。作者将编排定义为：对可能呈分布式部署的、基于容器的软件应用集群进行构建和持续管理。容器编排允许用户在部署一个多容器",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 94,
+      "text": "云可以被看作一种分布式、分层的架构体系，其中核心基础设施层、平台层和软件应用层分布在多云环境之中。容器技术在这里发挥着重要作用。可以预见，容器技术将在未来应用管理中占据核心地位，尤其是在云平台即服务场",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 95,
+      "text": "2.3 研究现状",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 96,
+      "text": "本文用于评估云容器技术的方法是系统映射研究。相关综述研究大体可以分为两类。第一类是系统文献综述（SLR），它更适合对已经较为成熟的研究领域进行总结性分析，通常建立在更大规模文献基础之上。第二类是系统映",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 97,
+      "text": "在文献筛选过程中，作者提取出了 6 篇与研究目标相关的综述性论文。其中有 5 篇可以归类为技术综述，即主要对容器技术本身进行概述和评估。文献 [S3] 讨论了虚拟化基础以及容器的构建与管理，更偏重于部",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 98,
+      "text": "三、研究方法",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 99,
+      "text": "3.1 系统映射过程",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 100,
+      "text": "系统映射研究通过一套严格的方法步骤来检索和分类文献，从而尽可能降低研究偏差。它依赖经过明确设计和评估的评审协议来完成数据提取、分析和结果记录。本文遵循 Petersen 等人在 2008 年提出的三步",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 101,
+      "text": "作者将系统映射方法应用到了以容器编排为重点的云技术研究中。该系统映射研究的关键步骤包括：定义研究问题、检索相关文献、筛选文献、对摘要进行关键词提取，以及数据提取与映射。每一步都会产生相应成果，而整个流",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 102,
+      "text": "此外，作者还利用 PICO，即 Population、Intervention、Comparison、Outcome 这四个维度来界定研究的总体目标与范围。评审过程从文献选择开始，最终得到提取后的数据",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 103,
+      "text": "3.2 研究问题的定义",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 104,
+      "text": "在下一步工作中，作者通过定义研究问题来塑造评审协议。系统映射研究的主要目标，是对某一研究领域形成总体概览，并识别其中已有研究的数量、类型以及研究成果。研究者还可以通过统计不同年份的发表频率来发现发展趋",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 105,
+      "text": "3.3 原始文献检索",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 106,
+      "text": "检索词的选择依据 Petersen 等人的方法，并以研究问题为指导。原始研究通常通过在科学数据库中使用检索字符串来识别，也可以通过人工浏览会议论文集或期刊来补充。构造检索字符串的一种常见方法，是基于 ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 107,
+      "text": "表 1 研究问题",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 108,
+      "text": "RQ1 关注“研究应用”：即基于容器的方法被应用在了哪些云活动中、出于什么原因被采用、以及具体是如何应用的。作者指出，容器既可以被看作基础设施层中虚拟机的一种替代方案，也可以被看作与平台服务和软件服务",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 109,
+      "text": "RQ2 关注“研究分布”：即关于云活动中容器技术的研究主要发表在哪些来源中、在什么时间发表。由于这一主题同时涉及云计算、软件工程、分布式系统和操作系统等多个学术共同体，因此相关研究理论上应当分散在多个",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 110,
+      "text": "RQ3 关注“成熟度”：即该领域目前的发展成熟程度如何。研究方法和评估方式能够反映该领域的成熟状态，例如，是否已经出现了足够多的重要实证研究来证明其实际价值，还是目前的研究重点依然停留在技术问题探索阶",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 111,
+      "text": "RQ4 关注“发展趋势”：即当前研究主要关注哪些问题，未来研究议程应当如何展开。其目的在于揭示研究空白，并识别未来的发展方向。作者认为，这仍然是一个较新的研究主题，整个领域还处于不断成熟之中，因此自然",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 112,
+      "text": "由于这一研究议题在云计算领域出现较晚，相应的发表论坛可能尚未被数据库完整收录，因此作者在正式筛选之前采用了一个初始范围更宽、并且部分依赖人工检索的策略。作者先通过较宽泛的检索式建立整体文献集合，再逐步",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 113,
+      "text": "3.4 纳入与排除标准",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 114,
+      "text": "在完成候选文献的初步收集之后，作者通过设定纳入与排除标准来对结果集进行进一步筛选。纳入的研究需要满足以下条件：明确讨论云环境下基于容器的虚拟化问题；在平台层面涉及编排、集群或管理；并且能够给出具体的技",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 115,
+      "text": "3.5 分类与数据提取",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 116,
+      "text": "随后，作者将 46 篇入选研究与第四节提出的特征化框架进行映射。对于每一篇研究，分别记录其发表来源、发表年份、贡献类型、技术栈、评估方法以及主要关注的问题。贡献类型被划分为解决方案提案、经验报告、技术",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 120,
+      "text": "指导教师（签字）：",
+      "fmt": {
+        "style": "a3",
+        "jc": "left",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "宋体",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 121,
+      "text": "年 月 日",
+      "fmt": {
+        "style": "a3",
+        "jc": "right",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "610",
+        "sz": "28",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    }
+  ],
+  "template_summary_first160": [
+    {
+      "idx": 7,
+      "text": "本科毕业设计（论文）英文翻译",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "48",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 12,
+      "text": "学生姓名：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 14,
+      "text": "学 号：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 16,
+      "text": "班 级：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 18,
+      "text": "专 业：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 20,
+      "text": "院 （系）：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 22,
+      "text": "指导教师：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 25,
+      "text": "二零二五年五月",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "312",
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 26,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "36",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": true,
+      "sect": false
+    },
+    {
+      "idx": 27,
+      "text": "英文来源：与论文研究领域相关期刊、书籍、网文摘录，中文译文字数不得少于2000字",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "21",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 28,
+      "text": "格式要求：英文原文为小四号 Times New Roman字体，字体颜色黑色，行首缩进2个字符、行距固定值20磅",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "21",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 29,
+      "text": "示例：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 30,
+      "text": "起止页码：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 31,
+      "text": "出版日期（期刊号）：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 32,
+      "text": "刊物名称（出版单位）：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 33,
+      "text": "（以上文字中，中文用小4号宋体，数字、字母用Times New Roman体，所有文字字体颜色黑色）",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 34,
+      "text": "Integrated wiring system",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 35,
+      "text": "Modern science and technology progress has made rapid development of computer and network technology",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 38,
+      "text": "二、中文译文",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "36",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 39,
+      "text": "以下文字为小四号宋体字、字体颜色黑色、行首缩进2个字符、行距固定值20磅。",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 42,
+      "text": "综合布线系统",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 44,
+      "text": "现代科技的进步使计算机及网络技术飞速发展，提供越来越强大的计算机处理能力和网络通信能力。计算机及网络通信技术的应用大大提高了现代企业的生产管理效率，降低运作成本，并使得现代企业能更快速有效地获取市场信",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 51,
+      "text": "指导教师（签字）：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 52,
+      "text": "年 月 日",
+      "fmt": {
+        "style": null,
+        "jc": "right",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    }
+  ],
+  "target_format_counts_after_p20": [
+    {
+      "idx": 36,
+      "text": "Containers as a lightweight technology to virtualise applications have recently ",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 35,
+      "text": "Abstract",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 28,
+      "text": "英文来源：Pahl C, Brogi A, Soldani J, Jamshidi P. Cloud Container Technologies: A Sta",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 20,
+      "text": "院 （系）：",
+      "fmt": {
+        "style": null,
+        "jc": "distribute",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      }
+    },
+    {
+      "idx": 21,
+      "text": "计算机学院",
+      "fmt": {
+        "style": null,
+        "jc": "left",
+        "line": "360",
+        "lineRule": "auto",
+        "before": null,
+        "after": null,
+        "firstLine": "643",
+        "sz": "32",
+        "ascii": "黑体",
+        "eastAsia": "黑体",
+        "bold": true
+      }
+    },
+    {
+      "idx": 27,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "240",
+        "after": "240",
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      }
+    },
+    {
+      "idx": 34,
+      "text": "Cloud Container Technologies: a State-of-the-Art Review",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 25,
+      "text": "二零二六年四月",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": "30",
+        "lineRule": "atLeast",
+        "before": "312",
+        "after": null,
+        "firstLine": "986",
+        "sz": "32",
+        "ascii": "宋体",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 120,
+      "text": "指导教师（签字）：",
+      "fmt": {
+        "style": "a3",
+        "jc": "left",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "宋体",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 121,
+      "text": "年 月 日",
+      "fmt": {
+        "style": "a3",
+        "jc": "right",
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "610",
+        "sz": "28",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      }
+    }
+  ],
+  "template_format_counts_after_p20": [
+    {
+      "idx": 30,
+      "text": "起止页码：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 20,
+      "text": "院 （系）：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 26,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "36",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 27,
+      "text": "英文来源：与论文研究领域相关期刊、书籍、网文摘录，中文译文字数不得少于2000字",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "21",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 29,
+      "text": "示例：",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      }
+    },
+    {
+      "idx": 25,
+      "text": "二零二五年五月",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "312",
+        "after": null,
+        "firstLine": null,
+        "sz": "32",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 34,
+      "text": "Integrated wiring system",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 35,
+      "text": "Modern science and technology progress has made rapid development of computer an",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 42,
+      "text": "综合布线系统",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 44,
+      "text": "现代科技的进步使计算机及网络技术飞速发展，提供越来越强大的计算机处理能力和网络通信能力。计算机及网络通信技术的应用大大提高了现代企业的生产管理效率，降低运作成本",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 51,
+      "text": "指导教师（签字）：",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": false
+      }
+    },
+    {
+      "idx": 52,
+      "text": "年 月 日",
+      "fmt": {
+        "style": null,
+        "jc": "right",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": "120",
+        "firstLine": null,
+        "sz": "28",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": false
+      }
+    }
+  ],
+  "template_instruction_hits": [
+    {
+      "idx": 26,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "36",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": true,
+      "sect": false
+    },
+    {
+      "idx": 27,
+      "text": "英文来源：与论文研究领域相关期刊、书籍、网文摘录，中文译文字数不得少于2000字",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "21",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 28,
+      "text": "格式要求：英文原文为小四号 Times New Roman字体，字体颜色黑色，行首缩进2个字符、行距固定值20磅",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "21",
+        "ascii": "Times New Roman",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 33,
+      "text": "（以上文字中，中文用小4号宋体，数字、字母用Times New Roman体，所有文字字体颜色黑色）",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": "156",
+        "after": "156",
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 38,
+      "text": "二、中文译文",
+      "fmt": {
+        "style": null,
+        "jc": "center",
+        "line": null,
+        "lineRule": null,
+        "before": "468",
+        "after": "156",
+        "firstLine": null,
+        "sz": "36",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 39,
+      "text": "以下文字为小四号宋体字、字体颜色黑色、行首缩进2个字符、行距固定值20磅。",
+      "fmt": {
+        "style": null,
+        "jc": "both",
+        "line": null,
+        "lineRule": null,
+        "before": null,
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": "Times",
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    }
+  ],
+  "target_instruction_hits": [
+    {
+      "idx": 27,
+      "text": "一、英文原文",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "240",
+        "after": "240",
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 74,
+      "text": "二、中文译文",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "240",
+        "after": "240",
+        "firstLine": null,
+        "sz": "32",
+        "ascii": null,
+        "eastAsia": "黑体",
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 78,
+      "text": "关键词",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": "160",
+        "after": null,
+        "firstLine": null,
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": true
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 101,
+      "text": "作者将系统映射方法应用到了以容器编排为重点的云技术研究中。该系统映射研究的关键步骤包括：定义研究问题、检索相关文献、筛选文献、对摘要进行关键词提取，以及数据提取与映射。每一步都会产生相应成果，而整个流程的最终产出就是系统映射图。根据研究目标，作者首先明确研究问题和研究范围，以便据此构建文献检索字符串。",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 106,
+      "text": "检索词的选择依据 Petersen 等人的方法，并以研究问题为指导。原始研究通常通过在科学数据库中使用检索字符串来识别，也可以通过人工浏览会议论文集或期刊来补充。构造检索字符串的一种常见方法，是基于 PICO 结构来组织关键词，从而使检索词与研究问题保持一致。检索字符串中的关键词可以分别来自 PICO 结构的不同方面。需要指出的是，与 Petersen 等人的建议不同，本文并未将特定结果类型或实验",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    },
+    {
+      "idx": 111,
+      "text": "RQ4 关注“发展趋势”：即当前研究主要关注哪些问题，未来研究议程应当如何展开。其目的在于揭示研究空白，并识别未来的发展方向。作者认为，这仍然是一个较新的研究主题，整个领域还处于不断成熟之中，因此自然会产生两个问题：当前还有哪些开放问题，以及未来还面临哪些挑战。文中还指出，这一点也体现在检索字符串之中，即 `(cloud* OR PaaS) AND (container*) AND (orches",
+      "fmt": {
+        "style": null,
+        "jc": null,
+        "line": "400",
+        "lineRule": "exact",
+        "before": null,
+        "after": null,
+        "firstLine": "476",
+        "sz": "24",
+        "ascii": null,
+        "eastAsia": null,
+        "bold": false
+      },
+      "pageBreak": false,
+      "sect": false
+    }
+  ]
+}
