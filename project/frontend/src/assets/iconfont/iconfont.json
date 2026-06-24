@@ -1,0 +1,184 @@
+{
+  "id": "4424684",
+  "name": "fileSystem",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22729679",
+      "name": "content-courses",
+      "font_class": "content-courses",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "22855588",
+      "name": "others-ppt",
+      "font_class": "others-ppt",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "22855589",
+      "name": "others-image",
+      "font_class": "others-image",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "22855590",
+      "name": "others-excel",
+      "font_class": "others-excel",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "22855591",
+      "name": "others-audio",
+      "font_class": "others-audio",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "22855592",
+      "name": "others-pdf",
+      "font_class": "others-pdf",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "22855593",
+      "name": "others-text",
+      "font_class": "others-text",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "22855594",
+      "name": "others-word",
+      "font_class": "others-word",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "22855595",
+      "name": "others-url",
+      "font_class": "others-url",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "22855596",
+      "name": "others-video",
+      "font_class": "others-video",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "22855833",
+      "name": "others-no-video",
+      "font_class": "others-no-video",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "22857040",
+      "name": "others-picture-default",
+      "font_class": "others-picture-default",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "25551852",
+      "name": "others-zip",
+      "font_class": "others-zip",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "25551853",
+      "name": "others-other",
+      "font_class": "others-other",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "26351840",
+      "name": "big-zip",
+      "font_class": "big-zip",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "26351842",
+      "name": "big-audio",
+      "font_class": "big-audio",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "26351843",
+      "name": "big-text",
+      "font_class": "big-text",
+      "unicode": "e6a8",
+      "unicode_decimal": 59048
+    },
+    {
+      "icon_id": "26351844",
+      "name": "big-image",
+      "font_class": "big-image",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "26351845",
+      "name": "big-video",
+      "font_class": "big-video",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "26351846",
+      "name": "big-excel",
+      "font_class": "big-excel",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
+      "icon_id": "26351847",
+      "name": "big-url",
+      "font_class": "big-url",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "26351848",
+      "name": "big-ppt",
+      "font_class": "big-ppt",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "26351849",
+      "name": "big-pdf",
+      "font_class": "big-pdf",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    },
+    {
+      "icon_id": "26351850",
+      "name": "big-word",
+      "font_class": "big-word",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "26357460",
+      "name": "big-other",
+      "font_class": "big-other",
+      "unicode": "e6b0",
+      "unicode_decimal": 59056
+    }
+  ]
+}
