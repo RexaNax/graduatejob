@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = { theme: { extend: { colors: { primary: '#0B1F3A', secondary: '#1F5EAB', accent: '#1BA6A6', 'text-primary': '#1E293B' }, fontFamily: { heading: ['Microsoft YaHei','PingFang SC','sans-serif'], body: ['Noto Sans SC','Arial','sans-serif'] } } } };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>研究背景与意义</title>
+  <style>
+*{box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;margin:0;padding:0;position:relative;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;color:#1e293b;background:#fff}
+.page{width:1280px;height:720px;position:relative;overflow:hidden;background:#f5f8fc}
+.deep{background:#0b1f3a;color:#eef6ff}
+.content{position:relative;z-index:2;padding:48px 64px;width:100%;height:100%}
+.kicker{font-size:16px;font-weight:700;color:#1ba6a6;letter-spacing:0}
+.title{font-size:38px;line-height:1.16;font-weight:800;color:#0b1f3a;margin:8px 0 22px}
+.deep .title{color:#fff}
+.subtitle{font-size:21px;line-height:1.6;color:#cfe3ff;max-width:920px}
+.grid{display:grid;gap:22px}
+.cols2{grid-template-columns:1fr 1fr}
+.cols3{grid-template-columns:repeat(3,1fr)}
+.cols4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid #dbe7f5;border-radius:18px;padding:22px;box-shadow:0 14px 34px rgba(15,46,95,.08)}
+.card h3{margin:0 0 10px;font-size:23px;color:#0b1f3a}
+.card p,.card li{font-size:18px;line-height:1.45;color:#334155;margin:0}
+.muted{color:#64748b}
+.tag{display:inline-flex;align-items:center;justify-content:center;padding:6px 12px;border-radius:999px;background:#e7f6ff;color:#155e9d;font-size:16px;font-weight:700}
+.accent{color:#1ba6a6}
+.line{height:2px;background:#1f5eab;opacity:.16}
+.band{position:absolute;background:#eaf3ff;border:1px solid #d8e8fb}
+.band.dark{background:#133765;border-color:#2b5f9f}
+.mesh{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px}
+.chip{display:inline-block;padding:8px 12px;border-radius:10px;background:#eef6ff;color:#1f5eab;font-weight:700;font-size:17px;margin:4px 6px 4px 0}
+.flow{display:flex;align-items:center;gap:12px}
+.flow .node{flex:1;min-height:76px;background:#fff;border:1px solid #dbe7f5;border-radius:16px;padding:14px;text-align:center;box-shadow:0 10px 26px rgba(15,46,95,.07)}
+.flow .node strong{display:block;font-size:20px;color:#0b1f3a;margin-bottom:6px}
+.flow .node span{font-size:15px;color:#64748b;line-height:1.3}
+.arrow{font-size:28px;color:#1f5eab;font-weight:800}
+.imgbox{background:#fff;border:1px solid #dbe7f5;border-radius:16px;padding:12px;box-shadow:0 14px 34px rgba(15,46,95,.08);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.imgbox img{max-width:100%;max-height:100%;object-fit:contain}
+.screenshot{border:1px solid #c7d6ea;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(15,46,95,.16)}
+.screenshot img{width:100%;height:100%;object-fit:cover;display:block}
+.caption{font-size:14px;color:#64748b;margin-top:8px;text-align:center}
+.table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid #dbe7f5;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(15,46,95,.08)}
+.table th{background:#0f3b70;color:#fff;font-size:17px;text-align:left;padding:13px 16px}
+.table td{font-size:16px;color:#334155;padding:12px 16px;border-top:1px solid #e5edf7;vertical-align:top}
+.num{font-size:42px;font-weight:900;color:#1f5eab;line-height:1}
+.small{font-size:15px;line-height:1.45}
+.quote{font-size:28px;line-height:1.35;font-weight:800;color:#0b1f3a}
+.avoid{background:#fff5f5;border-color:#fecaca}
+.ok{background:#f0fbff;border-color:#bae6fd}
+.mono{font-family:Consolas,Menlo,monospace}
+.footer-mark{position:absolute;left:64px;bottom:42px;font-size:18px;color:#9fb9d9}
+.deep .footer-mark{color:#b8cdeb}
+</style>
+</head>
+<body class="w-[1280px] h-[720px] overflow-hidden m-0 p-0 relative"><div class="page ">
+  <div class="content">
+    <div class="kicker">01 选题背景</div>
+    <div class="title">研究背景与意义</div>
+    <div class="grid cols3" style="height:238px">
+      <div class="card"><h3>文件需求增加</h3><p>课程设计、协作开发和日常学习中，文件存储、共享与在线预览需求持续增加。</p></div>
+      <div class="card"><h3>传统部署易失控</h3><p>本机环境、数据库初始化、静态路径和目录权限会影响系统迁移与答辩演示。</p></div>
+      <div class="card"><h3>容器化降低差异</h3><p>Docker Compose 将前端、后端、数据库、缓存和代理写入统一编排。</p></div>
+    </div>
+    <div style="margin-top:28px" class="flow">
+      <div class="node"><strong>工程实践</strong><span>从功能实现推进到可运行、可复现的完整工程</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><strong>教学答辩</strong><span>围绕上传、预览、分享、回收形成清晰演示链路</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><strong>技术应用</strong><span>验证前后端分离、数据库、缓存、代理与容器编排组合</span></div>
+    </div>
+    <div class="quote" style="position:absolute;left:64px;bottom:52px;width:980px">本课题关注的不只是“能做页面”，而是系统能否稳定部署、运行、演示和验证。</div>
+  </div>
+</div><script>if(window.lucide){lucide.createIcons();}</script></body></html>

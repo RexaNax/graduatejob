@@ -1,0 +1,96 @@
+{
+  "title": "基于容器化部署的云文件管理系统设计与实现",
+  "theme": "1. 整体风格：参考同学答辩模板的蓝白正式学术风，保留本科毕业设计的清晰、克制和系统展示导向，不做商业路演。\\n2. 背景：封面与结束页使用深蓝 #0A2442，内容页使用极浅蓝灰 #F7FAFD 和白色卡片；左侧深蓝竖条、顶部标题栏和页码形成统一母版感。\\n3. 字体：中文标题与正文使用 Microsoft YaHei / PingFang SC，英文小标题使用 Calibri Light，命令和代码使用 Consolas。\\n4. 配色：主色深蓝 #0F4C82，辅色 #1F497D，强调色 #2A9FD6，正文色 #1E293B，辅助灰 #64748B。\\n5. 视觉元素：流程图、真实系统截图与自然功能讲解并重；每页放入可直接讲述的实现说明、测试口径或运行结论，但避免大段照读稿和堆字。架构图、部署流程图和容器编排图使用蓝白学术风，真实截图只裁剪、标注、排版，不 AI 重绘。",
+  "slides": [
+    {
+      "file": "slide_001.html",
+      "type": "title",
+      "title": "基于容器化部署的云文件管理系统设计与实现",
+      "content_spec": "封面：展示论文题目、学校、学院专业、学生杨佳星、学号04222088、班级2203、指导教师王晓梅；视觉参考同学模板的居中标题和深蓝学术封面。"
+    },
+    {
+      "file": "slide_002.html",
+      "type": "content",
+      "title": "目录",
+      "content_spec": "展示四部分汇报结构：选题背景与研究目标、系统设计与容器化部署、核心功能实现、测试运行效果与总结；用于贴合同学模板的答辩节奏。"
+    },
+    {
+      "file": "slide_003.html",
+      "type": "content",
+      "title": "研究背景与意义",
+      "content_spec": "减少大段文字，用一张网络访问或云文件管理相关图辅助说明文件管理需求、传统部署痛点和容器化部署价值；明确课题定位为本科毕业设计场景。"
+    },
+    {
+      "file": "slide_004.html",
+      "type": "content",
+      "title": "研究目标与技术路线",
+      "content_spec": "合并研究目标和技术路线：展示登录、上传、目录、预览、分享、回收站、统计、容器部署等完成范围；同时说明 Vue3、Spring Boot、MySQL、Redis、Nginx、Docker Compose 的技术路线和不扩展边界。"
+    },
+    {
+      "file": "slide_005.html",
+      "type": "content",
+      "title": "系统总体设计",
+      "content_spec": "展示系统总体架构图，说明表现层、业务层、数据与资源层、部署与代理层，以及浏览器、Nginx、后端、MySQL、Redis、本地文件目录的访问关系。"
+    },
+    {
+      "file": "slide_006.html",
+      "type": "content",
+      "title": "容器化部署流程",
+      "content_spec": "用流程图展示 docker compose up -d --build、创建网络和数据卷、启动 MySQL/Redis、后端健康检查与兼容补丁、Nginx 统一入口等部署步骤；页面内自然说明为什么采用容器化、启动依赖和持久化设计，并放置真实容器状态截图。"
+    },
+    {
+      "file": "slide_007.html",
+      "type": "content",
+      "title": "容器编排关系与功能支撑",
+      "content_spec": "说明 lfs-nginx、lfs-backend、lfs-mysql、lfs-redis 和数据卷之间的编排关系；把上传下载、预览分享、回收站和统计对应到具体容器与数据关系，作为正文内的容器编排问答口径。"
+    },
+    {
+      "file": "slide_008.html",
+      "type": "content",
+      "title": "核心功能实现一：文件管理",
+      "content_spec": "展示文件上传流程图和文件列表截图，说明上传时同步保存物理文件与 lfs_file 元数据，目录通过 is_dir 记录构建，移动通过 parent_id 调整，删除进入回收站。"
+    },
+    {
+      "file": "slide_009.html",
+      "type": "content",
+      "title": "核心功能实现二：预览与分享",
+      "content_spec": "展示预览访问链路图和分享/预览截图，说明 /api/files、/api/thum、/api/trans 的统一处理，secret+expire 签名校验、路径归一化、路径越界检查，以及分享码+有效期匿名访问；把签名校验问答内容并入本页正文。"
+    },
+    {
+      "file": "slide_010.html",
+      "type": "content",
+      "title": "核心功能实现三：用户隔离、回收站与统计",
+      "content_spec": "说明 admin 和 demo 两类账号视角，CurrentUserService 和 lfs_file.user_id 的后端隔离机制，以及回收站和存储统计与同一用户视角保持一致；自然说明为什么本课题暂不扩展完整 Spring Security/RBAC。"
+    },
+    {
+      "file": "slide_011.html",
+      "type": "content",
+      "title": "系统测试与验证",
+      "content_spec": "展示测试范围图、T1-T17 测试项概括、5 个自动化测试类和 24 个用例通过情况；表格给出 17 项测试的分布来源，并强调测试验证关键链路，不编造性能指标、用户规模或覆盖率百分比。"
+    },
+    {
+      "file": "slide_012.html",
+      "type": "content",
+      "title": "系统运行界面一：登录与文件空间",
+      "content_spec": "拆分运行效果第一组：登录入口、文件列表、普通用户文件空间截图，说明系统基本页面和文件管理入口。"
+    },
+    {
+      "file": "slide_013.html",
+      "type": "content",
+      "title": "系统运行界面二：预览与分享",
+      "content_spec": "拆分运行效果第二组：文件预览、分享创建弹窗、分享访问页和相关调试截图，说明预览与分享业务闭环。"
+    },
+    {
+      "file": "slide_014.html",
+      "type": "content",
+      "title": "系统运行界面三：统计与容器状态",
+      "content_spec": "拆分运行效果第三组：用户视角与统计、文件列表/回收站视角、Docker Compose 容器运行状态和终端测试片段，说明系统部署和运行效果。"
+    },
+    {
+      "file": "slide_015.html",
+      "type": "title",
+      "title": "总结与展望",
+      "content_spec": "总结三个工程亮点：容器化一键部署、预览链路统一治理、双用户视角隔离；说明不足和后续对象存储、团队空间、分享策略、日志监控等展望，并致谢。"
+    }
+  ]
+}
